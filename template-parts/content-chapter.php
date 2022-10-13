@@ -6,7 +6,7 @@ $chapter_id = get_query_var('chapter');
 
 $chapter = ebooks_get_chapter($chapter_id);
 $book = get_post($chapter->post_id);
-$chapters = ebooks_get_chapters($chapter->post_id);
+$chapters = mylibrary_get_chapters($chapter->post_id);
 $chapter_ids = array_column($chapters, 'chapter_id');
 $current_key = array_search($chapter_id, $chapter_ids);
 

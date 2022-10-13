@@ -27,7 +27,7 @@
 			} else {
 				the_content( __( 'Continue reading', 'mylibrary' ) );
 
-				$chapters = ebooks_get_chapters(get_the_ID());
+				$chapters = mylibrary_get_chapters(get_the_ID());
 				if($chapters){
 					echo "<h2>".__( 'Chapter list', 'mylibrary' )."</h2>";
 					echo "<ol>";
