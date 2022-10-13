@@ -7,14 +7,14 @@
  * @since My_Library 1.0
  */
 
-if ( ! class_exists( 'library_Walker_Page' ) ) {
+if ( ! class_exists( 'mylibrary_Walker_Page' ) ) {
 	/**
 	 * CUSTOM PAGE WALKER
 	 * A custom walker for pages.
 	 *
 	 * @since My_Library 1.0
 	 */
-	class library_Walker_Page extends Walker_Page {
+	class mylibrary_Walker_Page extends Walker_Page {
 
 		/**
 		 * Outputs the beginning of the current element in the tree.
@@ -109,10 +109,10 @@ if ( ! class_exists( 'library_Walker_Page' ) ) {
 				if ( isset( $args['pages_with_children'][ $page->ID ] ) ) {
 
 					$toggle_target_string = '.menu-modal .page-item-' . $page->ID . ' > ul';
-					$toggle_duration      = library_toggle_duration();
+					$toggle_duration      = mylibrary_toggle_duration();
 
 					// Add the sub menu toggle.
-					$args['list_item_after'] .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'mylibrary' ) . '</span>' . library_get_theme_svg( 'chevron-down' ) . '</button>';
+					$args['list_item_after'] .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'mylibrary' ) . '</span>' . mylibrary_get_theme_svg( 'chevron-down' ) . '</button>';
 
 				}
 

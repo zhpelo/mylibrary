@@ -19,7 +19,7 @@
 
 				<button class="toggle close-nav-toggle fill-children-current-color" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" data-set-focus=".menu-modal">
 					<span class="toggle-text"><?php _e( 'Close Menu', 'mylibrary' ); ?></span>
-					<?php library_the_theme_svg( 'cross' ); ?>
+					<?php mylibrary_the_theme_svg( 'cross' ); ?>
 				</button><!-- .nav-toggle -->
 
 				<?php
@@ -93,7 +93,7 @@
 									'match_menu_classes' => true,
 									'show_toggles'       => true,
 									'title_li'           => false,
-									'walker'             => new library_Walker_Page(),
+									'walker'             => new mylibrary_Walker_Page(),
 								)
 							);
 

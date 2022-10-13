@@ -61,7 +61,7 @@
 							 *
 							 * @param bool Whether to show the categories in article header. Default true.
 							 */
-							$show_categories = apply_filters( 'library_show_categories_in_entry_header', true );
+							$show_categories = apply_filters( 'mylibrary_show_categories_in_entry_header', true );
 
 							if ( true === $show_categories && has_category() ) {
 								?>
@@ -84,7 +84,7 @@
 								<div class="to-the-content-wrapper">
 
 									<a href="#post-inner" class="to-the-content fill-children-current-color">
-										<?php library_the_theme_svg( 'arrow-down' ); ?>
+										<?php mylibrary_the_theme_svg( 'arrow-down' ); ?>
 										<div class="screen-reader-text"><?php _e( 'Scroll Down', 'mylibrary' ); ?></div>
 									</a><!-- .to-the-content -->
 
@@ -111,7 +111,7 @@
 									<?php
 								}
 
-								library_the_post_meta( get_the_ID(), 'single-top' );
+								mylibrary_the_post_meta( get_the_ID(), 'single-top' );
 
 							}
 							?>
@@ -144,7 +144,7 @@
 
 		edit_post_link();
 		// Single bottom post meta.
-		library_the_post_meta( get_the_ID(), 'single-bottom' );
+		mylibrary_the_post_meta( get_the_ID(), 'single-bottom' );
 
 		if ( post_type_supports( get_post_type( get_the_ID() ), 'author' ) && is_single() ) {
 

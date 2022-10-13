@@ -7,14 +7,14 @@
  * @since My_Library 1.0
  */
 
-if ( ! class_exists( 'library_Walker_Comment' ) ) {
+if ( ! class_exists( 'mylibrary_Walker_Comment' ) ) {
 	/**
 	 * CUSTOM COMMENT WALKER
 	 * A custom walker for comments, based on the walker in Twenty Nineteen.
 	 *
 	 * @since My_Library 1.0
 	 */
-	class library_Walker_Comment extends Walker_Comment {
+	class mylibrary_Walker_Comment extends Walker_Comment {
 
 		/**
 		 * Outputs a comment in the HTML5 format.
@@ -122,7 +122,7 @@ if ( ! class_exists( 'library_Walker_Comment' ) ) {
 						)
 					);
 
-					$by_post_author = library_is_comment_by_post_author( $comment );
+					$by_post_author = mylibrary_is_comment_by_post_author( $comment );
 
 					if ( $comment_reply_link || $by_post_author ) {
 						?>

@@ -12,13 +12,13 @@
 /**
  * Function to return the array of starter content for the theme.
  *
- * Passes it through the `library_starter_content` filter before returning.
+ * Passes it through the `mylibrary_starter_content` filter before returning.
  *
  * @since My_Library 1.0
  *
  * @return array A filtered array of args for the starter_content.
  */
-function library_get_starter_content() {
+function mylibrary_get_starter_content() {
 
 	// Define and register starter content to showcase the theme on new sites.
 	$starter_content = array(
@@ -213,6 +213,6 @@ function library_get_starter_content() {
 	 *
 	 * @param array $starter_content Array of starter content.
 	 */
-	return apply_filters( 'library_starter_content', $starter_content );
+	return apply_filters( 'mylibrary_starter_content', $starter_content );
 
 }

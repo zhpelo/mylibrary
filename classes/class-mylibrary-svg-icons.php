@@ -7,14 +7,14 @@
  * @since My_Library 1.0
  */
 
-if ( ! class_exists( 'library_SVG_Icons' ) ) {
+if ( ! class_exists( 'mylibrary_SVG_Icons' ) ) {
 	/**
 	 * SVG ICONS CLASS
 	 * Retrieve the SVG code for the specified icon. Based on a solution in Twenty Nineteen.
 	 *
 	 * @since My_Library 1.0
 	 */
-	class library_SVG_Icons {
+	class mylibrary_SVG_Icons {
 		/**
 		 * GET SVG CODE
 		 * Get the SVG code for the specified icon
@@ -44,7 +44,7 @@ if ( ! class_exists( 'library_SVG_Icons' ) ) {
 			 *
 			 * @param array $arr Array of icons.
 			 */
-			$arr = apply_filters( "library_svg_icons_{$group}", $arr );
+			$arr = apply_filters( "mylibrary_svg_icons_{$group}", $arr );
 
 			/**
 			 * Filters an SVG icon's color.
@@ -55,7 +55,7 @@ if ( ! class_exists( 'library_SVG_Icons' ) ) {
 			 * @param string $icon  The icon name.
 			 * @param string $group The icon group.
 			 */
-			$color = apply_filters( 'library_svg_icon_color', $color, $icon, $group );
+			$color = apply_filters( 'mylibrary_svg_icon_color', $color, $icon, $group );
 
 			if ( array_key_exists( $icon, $arr ) ) {
 				$repl = '<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" ';
@@ -92,7 +92,7 @@ if ( ! class_exists( 'library_SVG_Icons' ) ) {
 				 *
 				 * @param array $social_icons_map Array of default social icons.
 				 */
-				$map = apply_filters( 'library_social_icons_map', self::$social_icons_map );
+				$map = apply_filters( 'mylibrary_social_icons_map', self::$social_icons_map );
 
 				/**
 				 * Filters Library's array of social icons.
@@ -101,7 +101,7 @@ if ( ! class_exists( 'library_SVG_Icons' ) ) {
 				 *
 				 * @param array $social_icons Array of default social icons.
 				 */
-				$social_icons = apply_filters( 'library_svg_icons_social', self::$social_icons );
+				$social_icons = apply_filters( 'mylibrary_svg_icons_social', self::$social_icons );
 
 				foreach ( array_keys( $social_icons ) as $icon ) {
 					$domains            = array_key_exists( $icon, $map ) ? $map[ $icon ] : array( sprintf( '%s.com', $icon ) );
@@ -112,7 +112,7 @@ if ( ! class_exists( 'library_SVG_Icons' ) ) {
 			}
 			foreach ( $regex_map as $icon => $regex ) {
 				if ( preg_match( $regex, $uri ) ) {
-					return library_get_theme_svg( $icon, 'social' );
+					return mylibrary_get_theme_svg( $icon, 'social' );
 				}
 			}
 			return null;

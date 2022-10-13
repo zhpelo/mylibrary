@@ -31,7 +31,7 @@
  * @param bool  $display Display or return the HTML.
  * @return string Compiled HTML based on our arguments.
  */
-function library_site_logo( $args = array(), $display = true ) {
+function mylibrary_site_logo( $args = array(), $display = true ) {
 	$logo       = get_custom_logo();
 	$site_title = get_bloginfo( 'name' );
 	$contents   = '';
@@ -50,14 +50,14 @@ function library_site_logo( $args = array(), $display = true ) {
 	$args = wp_parse_args( $args, $defaults );
 
 	/**
-	 * Filters the arguments for `library_site_logo()`.
+	 * Filters the arguments for `mylibrary_site_logo()`.
 	 *
 	 * @since My_Library 1.0
 	 *
 	 * @param array $args     Parsed arguments.
 	 * @param array $defaults Function's default arguments.
 	 */
-	$args = apply_filters( 'library_site_logo_args', $args, $defaults );
+	$args = apply_filters( 'mylibrary_site_logo_args', $args, $defaults );
 
 	if ( has_custom_logo() ) {
 		$contents  = sprintf( $args['logo'], $logo, esc_html( $site_title ) );
@@ -72,7 +72,7 @@ function library_site_logo( $args = array(), $display = true ) {
 	$html = sprintf( $args[ $wrap ], $classname, $contents );
 
 	/**
-	 * Filters the arguments for `library_site_logo()`.
+	 * Filters the arguments for `mylibrary_site_logo()`.
 	 *
 	 * @since My_Library 1.0
 	 *
@@ -81,7 +81,7 @@ function library_site_logo( $args = array(), $display = true ) {
 	 * @param string $classname Class name based on current view, home or single.
 	 * @param string $contents  HTML for site title or logo.
 	 */
-	$html = apply_filters( 'library_site_logo', $html, $args, $classname, $contents );
+	$html = apply_filters( 'mylibrary_site_logo', $html, $args, $classname, $contents );
 
 	if ( ! $display ) {
 		return $html;
@@ -99,7 +99,7 @@ function library_site_logo( $args = array(), $display = true ) {
  * @param bool $display Display or return the HTML.
  * @return string The HTML to display.
  */
-function library_site_description( $display = true ) {
+function mylibrary_site_description( $display = true ) {
 	$description = get_bloginfo( 'description' );
 
 	if ( ! $description ) {
@@ -119,7 +119,7 @@ function library_site_description( $display = true ) {
 	 * @param string $description Site description via `bloginfo()`.
 	 * @param string $wrapper     The format used in case you want to reuse it in a `sprintf()`.
 	 */
-	$html = apply_filters( 'library_site_description', $html, $description, $wrapper );
+	$html = apply_filters( 'mylibrary_site_description', $html, $description, $wrapper );
 
 	if ( ! $display ) {
 		return $html;
@@ -140,7 +140,7 @@ function library_site_description( $display = true ) {
  * @param object $comment Comment data.
  * @return bool
  */
-function library_is_comment_by_post_author( $comment = null ) {
+function mylibrary_is_comment_by_post_author( $comment = null ) {
 
 	if ( is_object( $comment ) && $comment->user_id > 0 ) {
 
@@ -168,14 +168,14 @@ function library_is_comment_by_post_author( $comment = null ) {
  * @param string $link Link to the top of the page.
  * @return string Link to the top of the page.
  */
-function library_filter_comment_reply_link( $link ) {
+function mylibrary_filter_comment_reply_link( $link ) {
 
 	$link = str_replace( 'class=\'', 'class=\'do-not-scroll ', $link );
 	return $link;
 
 }
 
-add_filter( 'comment_reply_link', 'library_filter_comment_reply_link' );
+add_filter( 'comment_reply_link', 'mylibrary_filter_comment_reply_link' );
 
 /**
  * Post Meta
@@ -191,9 +191,9 @@ add_filter( 'comment_reply_link', 'library_filter_comment_reply_link' );
  * @param int    $post_id  The ID of the post for which the post meta should be output.
  * @param string $location Which post meta location to output – single or preview.
  */
-function library_the_post_meta( $post_id = null, $location = 'single-top' ) {
+function mylibrary_the_post_meta( $post_id = null, $location = 'single-top' ) {
 
-	echo library_get_post_meta( $post_id, $location ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped in library_get_post_meta().
+	echo mylibrary_get_post_meta( $post_id, $location ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped in mylibrary_get_post_meta().
 
 }
 
@@ -206,7 +206,7 @@ function library_the_post_meta( $post_id = null, $location = 'single-top' ) {
  * @param int    $post_id Post ID.
  * @param string $text    Anchor text.
  */
-function library_edit_post_link( $link, $post_id, $text ) {
+function mylibrary_edit_post_link( $link, $post_id, $text ) {
 	if ( is_admin() ) {
 		return $link;
 	}
@@ -230,11 +230,11 @@ function library_edit_post_link( $link, $post_id, $text ) {
 		get_the_title( $post_id )
 	);
 
-	return '<div class="post-meta-wrapper post-meta-edit-link-wrapper"><ul class="post-meta"><li class="post-edit meta-wrapper"><span class="meta-icon">' . library_get_theme_svg( 'edit' ) . '</span><span class="meta-text"><a href="' . esc_url( $edit_url ) . '">' . $text . '</a></span></li></ul><!-- .post-meta --></div><!-- .post-meta-wrapper -->';
+	return '<div class="post-meta-wrapper post-meta-edit-link-wrapper"><ul class="post-meta"><li class="post-edit meta-wrapper"><span class="meta-icon">' . mylibrary_get_theme_svg( 'edit' ) . '</span><span class="meta-text"><a href="' . esc_url( $edit_url ) . '">' . $text . '</a></span></li></ul><!-- .post-meta --></div><!-- .post-meta-wrapper -->';
 
 }
 
-add_filter( 'edit_post_link', 'library_edit_post_link', 10, 3 );
+add_filter( 'edit_post_link', 'mylibrary_edit_post_link', 10, 3 );
 
 /**
  * Retrieves the post meta.
@@ -244,7 +244,7 @@ add_filter( 'edit_post_link', 'library_edit_post_link', 10, 3 );
  * @param int    $post_id  The ID of the post.
  * @param string $location The location where the meta is shown.
  */
-function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
+function mylibrary_get_post_meta( $post_id = null, $location = 'single-top' ) {
 
 	// Require post ID.
 	if ( ! $post_id ) {
@@ -261,7 +261,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 	 *
 	 * @param array Array of post types.
 	 */
-	$disallowed_post_types = apply_filters( 'library_disallowed_post_types_for_meta_output', array( 'page' ) );
+	$disallowed_post_types = apply_filters( 'mylibrary_disallowed_post_types_for_meta_output', array( 'page' ) );
 
 	// Check whether the post type is allowed to output post meta.
 	if ( in_array( get_post_type( $post_id ), $disallowed_post_types, true ) ) {
@@ -288,7 +288,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 		 * }
 		 */
 		$post_meta = apply_filters(
-			'library_post_meta_location_single_top',
+			'mylibrary_post_meta_location_single_top',
 			array(
 				'author',
 				'post-date',
@@ -313,7 +313,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 		 * }
 		 */
 		$post_meta = apply_filters(
-			'library_post_meta_location_single_bottom',
+			'mylibrary_post_meta_location_single_bottom',
 			array(
 				'tags',
 			)
@@ -356,7 +356,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 				 * @param string $location  The location where the meta is shown.
 				 *                          Accepts 'single-top' or 'single-bottom'.
 				 */
-				do_action( 'library_start_of_post_meta_list', $post_id, $post_meta, $location );
+				do_action( 'mylibrary_start_of_post_meta_list', $post_id, $post_meta, $location );
 
 				// Author.
 				if ( post_type_supports( get_post_type( $post_id ), 'author' ) && in_array( 'author', $post_meta, true ) ) {
@@ -366,7 +366,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					<li class="post-author meta-wrapper">
 						<span class="meta-icon">
 							<span class="screen-reader-text"><?php _e( 'Post author', 'mylibrary' ); ?></span>
-							<?php library_the_theme_svg( 'user' ); ?>
+							<?php mylibrary_the_theme_svg( 'user' ); ?>
 						</span>
 						<span class="meta-text">
 							<?php
@@ -390,7 +390,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					<li class="post-date meta-wrapper">
 						<span class="meta-icon">
 							<span class="screen-reader-text"><?php _e( 'Post date', 'mylibrary' ); ?></span>
-							<?php library_the_theme_svg( 'calendar' ); ?>
+							<?php mylibrary_the_theme_svg( 'calendar' ); ?>
 						</span>
 						<span class="meta-text">
 							<a href="<?php the_permalink(); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a>
@@ -408,7 +408,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					<li class="post-categories meta-wrapper">
 						<span class="meta-icon">
 							<span class="screen-reader-text"><?php _e( 'Categories', 'mylibrary' ); ?></span>
-							<?php library_the_theme_svg( 'folder' ); ?>
+							<?php mylibrary_the_theme_svg( 'folder' ); ?>
 						</span>
 						<span class="meta-text">
 							<?php _ex( 'In', 'A string that is output before one or more categories', 'mylibrary' ); ?> <?php the_category( ', ' ); ?>
@@ -426,7 +426,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					<li class="post-tags meta-wrapper">
 						<span class="meta-icon">
 							<span class="screen-reader-text"><?php _e( 'Tags', 'mylibrary' ); ?></span>
-							<?php library_the_theme_svg( 'tag' ); ?>
+							<?php mylibrary_the_theme_svg( 'tag' ); ?>
 						</span>
 						<span class="meta-text">
 							<?php the_tags( '', ', ', '' ); ?>
@@ -443,7 +443,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					?>
 					<li class="post-comment-link meta-wrapper">
 						<span class="meta-icon">
-							<?php library_the_theme_svg( 'comment' ); ?>
+							<?php mylibrary_the_theme_svg( 'comment' ); ?>
 						</span>
 						<span class="meta-text">
 							<?php comments_popup_link(); ?>
@@ -460,7 +460,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					?>
 					<li class="post-sticky meta-wrapper">
 						<span class="meta-icon">
-							<?php library_the_theme_svg( 'bookmark' ); ?>
+							<?php mylibrary_the_theme_svg( 'bookmark' ); ?>
 						</span>
 						<span class="meta-text">
 							<?php _e( 'Sticky post', 'mylibrary' ); ?>
@@ -483,7 +483,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 				 * @param string $location  The location where the meta is shown.
 				 *                          Accepts 'single-top' or 'single-bottom'.
 				 */
-				do_action( 'library_end_of_post_meta_list', $post_id, $post_meta, $location );
+				do_action( 'mylibrary_end_of_post_meta_list', $post_id, $post_meta, $location );
 
 				?>
 
@@ -526,7 +526,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
  * @param int      $current_page ID of the current page.
  * @return array CSS class names.
  */
-function library_filter_wp_list_pages_item_classes( $css_class, $page, $depth, $args, $current_page ) {
+function mylibrary_filter_wp_list_pages_item_classes( $css_class, $page, $depth, $args, $current_page ) {
 
 	// Only apply to wp_list_pages() calls with match_menu_classes set to true.
 	$match_menu_classes = isset( $args['match_menu_classes'] );
@@ -549,7 +549,7 @@ function library_filter_wp_list_pages_item_classes( $css_class, $page, $depth, $
 
 }
 
-add_filter( 'page_css_class', 'library_filter_wp_list_pages_item_classes', 10, 5 );
+add_filter( 'page_css_class', 'mylibrary_filter_wp_list_pages_item_classes', 10, 5 );
 
 /**
  * Adds a Sub Nav Toggle to the Expanded Menu and Mobile Menu.
@@ -561,7 +561,7 @@ add_filter( 'page_css_class', 'library_filter_wp_list_pages_item_classes', 10, 5
  * @param int      $depth Depth of menu item. Used for padding.
  * @return stdClass An object of wp_nav_menu() arguments.
  */
-function library_add_sub_toggles_to_main_menu( $args, $item, $depth ) {
+function mylibrary_add_sub_toggles_to_main_menu( $args, $item, $depth ) {
 
 	// Add sub menu toggles to the Expanded Menu with toggles.
 	if ( isset( $args->show_toggles ) && $args->show_toggles ) {
@@ -574,10 +574,10 @@ function library_add_sub_toggles_to_main_menu( $args, $item, $depth ) {
 		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 			$toggle_target_string = '.menu-modal .menu-item-' . $item->ID . ' > .sub-menu';
-			$toggle_duration      = library_toggle_duration();
+			$toggle_duration      = mylibrary_toggle_duration();
 
 			// Add the sub menu toggle.
-			$args->after .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'mylibrary' ) . '</span>' . library_get_theme_svg( 'chevron-down' ) . '</button>';
+			$args->after .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'mylibrary' ) . '</span>' . mylibrary_get_theme_svg( 'chevron-down' ) . '</button>';
 
 		}
 
@@ -597,7 +597,7 @@ function library_add_sub_toggles_to_main_menu( $args, $item, $depth ) {
 
 }
 
-add_filter( 'nav_menu_item_args', 'library_add_sub_toggles_to_main_menu', 10, 3 );
+add_filter( 'nav_menu_item_args', 'mylibrary_add_sub_toggles_to_main_menu', 10, 3 );
 
 /**
  * Displays SVG icons in social links menu.
@@ -610,12 +610,12 @@ add_filter( 'nav_menu_item_args', 'library_add_sub_toggles_to_main_menu', 10, 3 
  * @param stdClass $args        An object of wp_nav_menu() arguments.
  * @return string The menu item output with social icon.
  */
-function library_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
+function mylibrary_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 	// Change SVG icon inside social links menu if there is supported URL.
 	if ( 'social' === $args->theme_location ) {
-		$svg = library_SVG_Icons::get_social_link_svg( $item->url );
+		$svg = mylibrary_SVG_Icons::get_social_link_svg( $item->url );
 		if ( empty( $svg ) ) {
-			$svg = library_get_theme_svg( 'link' );
+			$svg = mylibrary_get_theme_svg( 'link' );
 		}
 		$item_output = str_replace( $args->link_after, '</span>' . $svg, $item_output );
 	}
@@ -623,7 +623,7 @@ function library_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 	return $item_output;
 }
 
-add_filter( 'walker_nav_menu_start_el', 'library_nav_menu_social_icons', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'mylibrary_nav_menu_social_icons', 10, 4 );
 
 /**
  * Classes
@@ -636,7 +636,7 @@ add_filter( 'walker_nav_menu_start_el', 'library_nav_menu_social_icons', 10, 4 )
  *
  * @since My_Library 1.0
  */
-function library_no_js_class() {
+function mylibrary_no_js_class() {
 
 	?>
 	<script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script>
@@ -644,7 +644,7 @@ function library_no_js_class() {
 
 }
 
-add_action( 'wp_head', 'library_no_js_class' );
+add_action( 'wp_head', 'mylibrary_no_js_class' );
 
 /**
  * Adds conditional body classes.
@@ -654,7 +654,7 @@ add_action( 'wp_head', 'library_no_js_class' );
  * @param array $classes Classes added to the body tag.
  * @return array Classes added to the body tag.
  */
-function library_body_classes( $classes ) {
+function mylibrary_body_classes( $classes ) {
 
 	global $post;
 	$post_type = isset( $post ) ? $post->post_type : false;
@@ -743,7 +743,7 @@ function library_body_classes( $classes ) {
 
 }
 
-add_filter( 'body_class', 'library_body_classes' );
+add_filter( 'body_class', 'mylibrary_body_classes' );
 
 /**
  * Archives
@@ -757,7 +757,7 @@ add_filter( 'body_class', 'library_body_classes' );
  * @param string $title Current archive title.
  * @return string Current archive title.
  */
-function library_get_the_archive_title( $title ) {
+function mylibrary_get_the_archive_title( $title ) {
 
 	/**
 	 * Filters the regular expression used to style the word before the first colon.
@@ -767,7 +767,7 @@ function library_get_the_archive_title( $title ) {
 	 * @param array $regex An array of regular expression pattern and replacement.
 	 */
 	$regex = apply_filters(
-		'library_get_the_archive_title_regex',
+		'mylibrary_get_the_archive_title_regex',
 		array(
 			'pattern'     => '/(\A[^\:]+\:)/',
 			'replacement' => '<span class="color-accent">$1</span>',
@@ -784,7 +784,7 @@ function library_get_the_archive_title( $title ) {
 
 }
 
-add_filter( 'get_the_archive_title', 'library_get_the_archive_title' );
+add_filter( 'get_the_archive_title', 'mylibrary_get_the_archive_title' );
 
 /**
  * Miscellaneous
@@ -797,7 +797,7 @@ add_filter( 'get_the_archive_title', 'library_get_the_archive_title' );
  *
  * @return int Duration in milliseconds
  */
-function library_toggle_duration() {
+function mylibrary_toggle_duration() {
 	/**
 	 * Filters the animation duration/speed used usually for submenu toggles.
 	 *
@@ -805,7 +805,7 @@ function library_toggle_duration() {
 	 *
 	 * @param int $duration Duration in milliseconds.
 	 */
-	$duration = apply_filters( 'library_toggle_duration', 250 );
+	$duration = apply_filters( 'mylibrary_toggle_duration', 250 );
 
 	return $duration;
 }
@@ -825,7 +825,7 @@ function library_toggle_duration() {
  * @param string $prefix Prefix for the returned ID.
  * @return string Unique ID.
  */
-function library_unique_id( $prefix = '' ) {
+function mylibrary_unique_id( $prefix = '' ) {
 	static $id_counter = 0;
 	if ( function_exists( 'wp_unique_id' ) ) {
 		return wp_unique_id( $prefix );
@@ -847,90 +847,14 @@ function get_chapter_url($chapter_id) {
 }
 
 
-/**
- * Displays the site logo, either text or image.
- */
-function ebooks_site_logo( $args = array(), $display = true ) {
-	$logo       = get_custom_logo();
-	$site_title = get_bloginfo( 'name' );
-	$contents   = '';
-	$classname  = '';
 
-	$defaults = array(
-		'logo'        => '%1$s<span class="screen-reader-text">%2$s</span>',
-		'logo_class'  => 'site-logo',
-		'title'       => '<a href="%1$s">%2$s</a>',
-		'title_class' => 'site-title',
-		'home_wrap'   => '<h1 class="%1$s">%2$s</h1>',
-		'single_wrap' => '<div class="%1$s faux-heading">%2$s</div>',
-		'condition'   => ( is_front_page() || is_home() ) && ! is_page(),
-	);
-
-	$args = wp_parse_args( $args, $defaults );
-
-	$args = apply_filters( 'ebooks_site_logo_args', $args, $defaults );
-
-	if ( has_custom_logo() ) {
-		$contents  = sprintf( $args['logo'], $logo, esc_html( $site_title ) );
-		$classname = $args['logo_class'];
-	} else {
-		$contents  = sprintf( $args['title'], esc_url( get_home_url( null, '/' ) ), esc_html( $site_title ) );
-		$classname = $args['title_class'];
-	}
-
-	$wrap = $args['condition'] ? 'home_wrap' : 'single_wrap';
-
-	$html = sprintf( $args[ $wrap ], $classname, $contents );
-
-	/**
-	 * Filters the arguments for `twentytwenty_site_logo()`.
-	 *
-	 * @since Twenty Twenty 1.0
-	 *
-	 * @param string $html      Compiled HTML based on our arguments.
-	 * @param array  $args      Parsed arguments.
-	 * @param string $classname Class name based on current view, home or single.
-	 * @param string $contents  HTML for site title or logo.
-	 */
-	$html = apply_filters( 'ebooks_site_logo', $html, $args, $classname, $contents );
-
-	if ( ! $display ) {
-		return $html;
-	}
-
-	echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
-}
-
-/**
- * Displays the site description.
- */
-function ebooks_site_description( $display = true ) {
-	$description = get_bloginfo( 'description' );
-
-	if ( ! $description ) {
-		return;
-	}
-
-	$wrapper = '<div class="site-description">%s</div><!-- .site-description -->';
-
-	$html = sprintf( $wrapper, esc_html( $description ) );
-
-	$html = apply_filters( 'ebooks_site_description', $html, $description, $wrapper );
-
-	if ( ! $display ) {
-		return $html;
-	}
-
-	echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-}
 
  /**
   * 计算字数
   * @param string $str 文字
   * @return int
   */
-  function word_count($str){
+  function mylibrary_word_count($str){
 	//转换html实体字符
 	$str = htmlspecialchars_decode($str);
 	//清楚html代码
@@ -945,7 +869,7 @@ function ebooks_site_description( $display = true ) {
   * @param int $strlen 数字
   * @return string
   */
- function human_strlen($strlen)
+ function mylibrary_human_strlen($strlen)
  {
 	 if($strlen >= 100000000){
 		 return number_format($strlen/100000000, 2)." 亿字";
@@ -959,7 +883,7 @@ function ebooks_site_description( $display = true ) {
  }
 
 
- function ebooks_get_chapter($chapter_id)
+ function mylibrary_get_chapter($chapter_id)
 {
 	global $wpdb;
 	$chapter = $wpdb->get_row(
@@ -969,7 +893,7 @@ function ebooks_site_description( $display = true ) {
 }
 
 
-function ebooks_get_chapters($post_id)
+function mylibrary_get_chapters($post_id)
 {
 	global $wpdb;
 	$chapters = $wpdb->get_results(

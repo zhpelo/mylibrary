@@ -7,13 +7,13 @@
  * @since My_Library 1.0
  */
 
-if ( ! class_exists( 'library_Customize' ) ) {
+if ( ! class_exists( 'mylibrary_Customize' ) ) {
 	/**
 	 * CUSTOMIZER SETTINGS
 	 *
 	 * @since My_Library 1.0
 	 */
-	class library_Customize {
+	class mylibrary_Customize {
 
 		/**
 		 * Register customizer options.
@@ -34,7 +34,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 				'blogname',
 				array(
 					'selector'        => '.site-title a',
-					'render_callback' => 'library_customize_partial_blogname',
+					'render_callback' => 'mylibrary_customize_partial_blogname',
 				)
 			);
 
@@ -42,7 +42,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 				'blogdescription',
 				array(
 					'selector'        => '.site-description',
-					'render_callback' => 'library_customize_partial_blogdescription',
+					'render_callback' => 'mylibrary_customize_partial_blogdescription',
 				)
 			);
 
@@ -50,7 +50,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 				'custom_logo',
 				array(
 					'selector'            => '.header-titles [class*=site-]:not(.site-description)',
-					'render_callback'     => 'library_customize_partial_site_logo',
+					'render_callback'     => 'mylibrary_customize_partial_site_logo',
 					'container_inclusive' => true,
 				)
 			);
@@ -59,7 +59,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 				'retina_logo',
 				array(
 					'selector'        => '.header-titles [class*=site-]:not(.site-description)',
-					'render_callback' => 'library_customize_partial_site_logo',
+					'render_callback' => 'mylibrary_customize_partial_site_logo',
 				)
 			);
 
@@ -333,7 +333,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 			);
 
 			$wp_customize->add_control(
-				new library_Separator_Control(
+				new mylibrary_Separator_Control(
 					$wp_customize,
 					'cover_template_separator_1',
 					array(
@@ -347,7 +347,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 			$wp_customize->add_setting(
 				'cover_template_overlay_background_color',
 				array(
-					'default'           => library_get_color_for_area( 'content', 'accent' ),
+					'default'           => mylibrary_get_color_for_area( 'content', 'accent' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
 			);
@@ -404,7 +404,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 					'description' => __( 'Make sure that the contrast is high enough so that the text is readable.', 'mylibrary' ),
 					'section'     => 'cover_template_options',
 					'type'        => 'range',
-					'input_attrs' => library_customize_opacity_range(),
+					'input_attrs' => mylibrary_customize_opacity_range(),
 				)
 			);
 
@@ -473,36 +473,36 @@ if ( ! class_exists( 'library_Customize' ) ) {
 	}
 
 	// Setup the Theme Customizer settings and controls.
-	add_action( 'customize_register', array( 'library_Customize', 'register' ) );
+	add_action( 'customize_register', array( 'mylibrary_Customize', 'register' ) );
 
 }
 
 /**
  * PARTIAL REFRESH FUNCTIONS
  * */
-if ( ! function_exists( 'library_customize_partial_blogname' ) ) {
+if ( ! function_exists( 'mylibrary_customize_partial_blogname' ) ) {
 	/**
 	 * Render the site title for the selective refresh partial.
 	 *
 	 * @since My_Library 1.0
 	 */
-	function library_customize_partial_blogname() {
+	function mylibrary_customize_partial_blogname() {
 		bloginfo( 'name' );
 	}
 }
 
-if ( ! function_exists( 'library_customize_partial_blogdescription' ) ) {
+if ( ! function_exists( 'mylibrary_customize_partial_blogdescription' ) ) {
 	/**
 	 * Render the site description for the selective refresh partial.
 	 *
 	 * @since My_Library 1.0
 	 */
-	function library_customize_partial_blogdescription() {
+	function mylibrary_customize_partial_blogdescription() {
 		bloginfo( 'description' );
 	}
 }
 
-if ( ! function_exists( 'library_customize_partial_site_logo' ) ) {
+if ( ! function_exists( 'mylibrary_customize_partial_site_logo' ) ) {
 	/**
 	 * Render the site logo for the selective refresh partial.
 	 *
@@ -510,8 +510,8 @@ if ( ! function_exists( 'library_customize_partial_site_logo' ) ) {
 	 *
 	 * @since My_Library 1.0
 	 */
-	function library_customize_partial_site_logo() {
-		library_site_logo();
+	function mylibrary_customize_partial_site_logo() {
+		mylibrary_site_logo();
 	}
 }
 
@@ -523,7 +523,7 @@ if ( ! function_exists( 'library_customize_partial_site_logo' ) ) {
  *
  * @return array Array containing attribute names and their values.
  */
-function library_customize_opacity_range() {
+function mylibrary_customize_opacity_range() {
 	/**
 	 * Filters the input attributes for opacity.
 	 *
@@ -538,7 +538,7 @@ function library_customize_opacity_range() {
 	 * }
 	 */
 	return apply_filters(
-		'library_customize_opacity_range',
+		'mylibrary_customize_opacity_range',
 		array(
 			'min'  => 0,
 			'max'  => 90,

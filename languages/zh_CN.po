@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Library\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-23 04:15+0000\n"
-"PO-Revision-Date: 2022-10-13 15:12+0000\n"
+"PO-Revision-Date: 2022-10-13 15:51+0000\n"
 "Last-Translator: 小叮当\n"
 "Language-Team: 简体中文\n"
 "Language: zh_CN\n"
@@ -398,7 +398,7 @@ msgstr "在归档页面，帖子列表 中显示："
 
 #: functions.php:986
 msgid "Operate"
-msgstr ""
+msgstr "操作"
 
 #: classes/class-library-customize.php:360
 msgid "Overlay Background Color"

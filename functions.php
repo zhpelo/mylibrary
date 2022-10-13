@@ -31,7 +31,7 @@
  *
  * @since My_Library 1.0
  */
-function library_theme_support() {
+function mylibrary_theme_support() {
 
 	// Add default posts and comments RSS feed links to head.
 	// 将默认帖子和评论 的 RSS feed links 添加到头部。
@@ -136,7 +136,7 @@ function library_theme_support() {
 	 */
 	if ( is_customize_preview() ) { // 是否正在定制器中预览站点。
 		require get_template_directory() . '/inc/starter-content.php';
-		add_theme_support( 'starter-content', library_get_starter_content() );
+		add_theme_support( 'starter-content', mylibrary_get_starter_content() );
 	}
 
 	// Add theme support for selective refresh for widgets.
@@ -148,16 +148,15 @@ function library_theme_support() {
 	 * by the theme.
 	 * 为主题注册或入队的脚本添加了 `async` 和 `defer` 支持
 	 */
-	$loader = new library_Script_Loader();
+	$loader = new mylibrary_Script_Loader();
 	add_filter( 'script_loader_tag', array( $loader, 'filter_script_loader_tag' ), 10, 2 );
 
-	//ebooks_add_post_type();
 	//设置chapter 伪静态规则
 	add_rewrite_rule( '^chapter/(\d+)[/]?$', 'index.php?chapter=$matches[1]', 'top' );
 	flush_rewrite_rules();
 }
 
-add_action( 'after_setup_theme', 'library_theme_support' );
+add_action( 'after_setup_theme', 'mylibrary_theme_support' );
 
 /**
  * REQUIRED FILES
@@ -166,31 +165,33 @@ add_action( 'after_setup_theme', 'library_theme_support' );
 require get_template_directory() . '/inc/template-tags.php';
 
 // Handle SVG icons.
-require get_template_directory() . '/classes/class-library-svg-icons.php';
+require get_template_directory() . '/classes/class-mylibrary-svg-icons.php';
 require get_template_directory() . '/inc/svg-icons.php';
 
 // Handle Customizer settings.
-require get_template_directory() . '/classes/class-library-customize.php';
+require get_template_directory() . '/classes/class-mylibrary-customize.php';
 
 // Require Separator Control class.
-require get_template_directory() . '/classes/class-library-separator-control.php';
+require get_template_directory() . '/classes/class-mylibrary-separator-control.php';
 
 // Custom comment walker.
-require get_template_directory() . '/classes/class-library-walker-comment.php';
+require get_template_directory() . '/classes/class-mylibrary-walker-comment.php';
 
 // Custom page walker.
-require get_template_directory() . '/classes/class-library-walker-page.php';
+require get_template_directory() . '/classes/class-mylibrary-walker-page.php';
 
 // Custom script loader class.
-require get_template_directory() . '/classes/class-library-script-loader.php';
+require get_template_directory() . '/classes/class-mylibrary-script-loader.php';
 
 // Non-latin language handling.
 // 非拉丁语处理。
-require get_template_directory() . '/classes/class-library-non-latin-languages.php';
+require get_template_directory() . '/classes/class-mylibrary-non-latin-languages.php';
 
 // Custom CSS.
 // 自定义CSS
 require get_template_directory() . '/inc/custom-css.php';
+// 自定义 帖子类型
+require get_template_directory() . '/inc/custom-post-type.php';
 
 // Block Patterns.
 require get_template_directory() . '/inc/block-patterns.php';
@@ -200,7 +201,7 @@ require get_template_directory() . '/inc/block-patterns.php';
  *
  * @since My_Library 1.0
  */
-function library_register_styles() {
+function mylibrary_register_styles() {
 
 	$theme_version = wp_get_theme()->get( 'Version' );
 
@@ -210,21 +211,21 @@ function library_register_styles() {
 	// Add output of Customizer settings as inline style.
 	// 将定制器设置的输出添加为内联样式。
 	// 向已注册的样式表添加额外的 CSS 样式。
-	wp_add_inline_style( 'library-style', library_get_customizer_css( 'front-end' ) );
+	wp_add_inline_style( 'library-style', mylibrary_get_customizer_css( 'front-end' ) );
 
 	// Add print CSS.
 	wp_enqueue_style( 'library-print-style', get_template_directory_uri() . '/print.css', null, $theme_version, 'print' );
 
 }
 
-add_action( 'wp_enqueue_scripts', 'library_register_styles' );
+add_action( 'wp_enqueue_scripts', 'mylibrary_register_styles' );
 
 /**
  * Register and Enqueue Scripts.
  * 注册和加入 Scripts
  * @since My_Library 1.0
  */
-function library_register_scripts() {
+function mylibrary_register_scripts() {
 
 	$theme_version = wp_get_theme()->get( 'Version' );
 
@@ -238,7 +239,7 @@ function library_register_scripts() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'library_register_scripts' );
+add_action( 'wp_enqueue_scripts', 'mylibrary_register_scripts' );
 
 /**
  * Fix skip link focus in IE11.
@@ -252,7 +253,7 @@ add_action( 'wp_enqueue_scripts', 'library_register_scripts' );
  *
  * @link https://git.io/vWdr2
  */
-function library_skip_link_focus_fix() {
+function mylibrary_skip_link_focus_fix() {
 	// The following is minified via `terser --compress --mangle -- assets/js/skip-link-focus-fix.js`.
 	?>
 	<script>
@@ -260,7 +261,7 @@ function library_skip_link_focus_fix() {
 	</script>
 	<?php
 }
-add_action( 'wp_print_footer_scripts', 'library_skip_link_focus_fix' );
+add_action( 'wp_print_footer_scripts', 'mylibrary_skip_link_focus_fix' );
 
 /**
  * Enqueue non-latin language styles.
@@ -269,8 +270,8 @@ add_action( 'wp_print_footer_scripts', 'library_skip_link_focus_fix' );
  *
  * @return void
  */
-function library_non_latin_languages() {
-	$custom_css = library_Non_Latin_Languages::get_non_latin_css( 'front-end' );
+function mylibrary_non_latin_languages() {
+	$custom_css = mylibrary_Non_Latin_Languages::get_non_latin_css( 'front-end' );
 
 	if ( $custom_css ) {
 		//向已注册的样式表添加额外的 CSS 样式。
@@ -278,7 +279,7 @@ function library_non_latin_languages() {
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'library_non_latin_languages' );
+add_action( 'wp_enqueue_scripts', 'mylibrary_non_latin_languages' );
 
 /**
  * Register navigation menus uses wp_nav_menu in five places.
@@ -286,7 +287,7 @@ add_action( 'wp_enqueue_scripts', 'library_non_latin_languages' );
  *
  * @since My_Library 1.0
  */
-function library_menus() {
+function mylibrary_menus() {
 
 	$locations = array(
 		'primary'  => __( 'Desktop Horizontal Menu', 'mylibrary' ),
@@ -297,11 +298,10 @@ function library_menus() {
 	);
 
 	register_nav_menus( $locations );
-	//新增文章类型
-	ebooks_add_post_type();
+
 }
 
-add_action( 'init', 'library_menus' );
+add_action( 'init', 'mylibrary_menus' );
 
 /**
  * Get the information about the logo.
@@ -311,7 +311,7 @@ add_action( 'init', 'library_menus' );
  * @param string $html The HTML output from get_custom_logo (core function).
  * @return string
  */
-function library_get_custom_logo( $html ) {
+function mylibrary_get_custom_logo( $html ) {
 
 	$logo_id = get_theme_mod( 'custom_logo' );
 
@@ -360,7 +360,7 @@ function library_get_custom_logo( $html ) {
 
 }
 
-add_filter( 'get_custom_logo', 'library_get_custom_logo' );
+add_filter( 'get_custom_logo', 'mylibrary_get_custom_logo' );
 
 if ( ! function_exists( 'wp_body_open' ) ) {
 
@@ -380,11 +380,11 @@ if ( ! function_exists( 'wp_body_open' ) ) {
  * 在页面顶部包含跳转到内容链接，以便用户可以绕过菜单。
  * @since My_Library 1.0
  */
-function library_skip_link() {
+function mylibrary_skip_link() {
 	echo '<a class="skip-link screen-reader-text" href="#site-content">' . __( 'Skip to the content', 'mylibrary' ) . '</a>';
 }
 
-add_action( 'wp_body_open', 'library_skip_link', 5 );
+add_action( 'wp_body_open', 'mylibrary_skip_link', 5 );
 
 /**
  * Register widget areas.
@@ -393,7 +393,7 @@ add_action( 'wp_body_open', 'library_skip_link', 5 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function library_sidebar_registration() {
+function mylibrary_sidebar_registration() {
 
 	// Arguments used in all register_sidebar() calls.
 	$shared_args = array(
@@ -429,38 +429,38 @@ function library_sidebar_registration() {
 
 }
 
-add_action( 'widgets_init', 'library_sidebar_registration' );
+add_action( 'widgets_init', 'mylibrary_sidebar_registration' );
 
 /**
  * Enqueue supplemental block editor styles.
  * 将区块编辑器的补充样式 加入队列。
  * @since My_Library 1.0
  */
-function library_block_editor_styles() {
+function mylibrary_block_editor_styles() {
 
 	// Enqueue the editor styles.
 	wp_enqueue_style( 'library-block-editor-styles', get_theme_file_uri( '/assets/css/editor-style-block.css' ), array(), wp_get_theme()->get( 'Version' ), 'all' );
 	wp_style_add_data( 'library-block-editor-styles', 'rtl', 'replace' );
 
 	// Add inline style from the Customizer.
-	wp_add_inline_style( 'library-block-editor-styles', library_get_customizer_css( 'block-editor' ) );
+	wp_add_inline_style( 'library-block-editor-styles', mylibrary_get_customizer_css( 'block-editor' ) );
 
 	// Add inline style for non-latin fonts.
 	// 为非拉丁字体添加内联样式。
-	wp_add_inline_style( 'library-block-editor-styles', library_Non_Latin_Languages::get_non_latin_css( 'block-editor' ) );
+	wp_add_inline_style( 'library-block-editor-styles', mylibrary_Non_Latin_Languages::get_non_latin_css( 'block-editor' ) );
 
 	// Enqueue the editor script.
 	wp_enqueue_script( 'library-block-editor-script', get_theme_file_uri( '/assets/js/editor-script-block.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
 }
 
-add_action( 'enqueue_block_editor_assets', 'library_block_editor_styles', 1, 1 );
+add_action( 'enqueue_block_editor_assets', 'mylibrary_block_editor_styles', 1, 1 );
 
 /**
  * Enqueue classic editor styles.
  * 将经典编辑器样式 排入队列。
  * @since My_Library 1.0
  */
-function library_classic_editor_styles() {
+function mylibrary_classic_editor_styles() {
 
 	$classic_editor_styles = array(
 		'/assets/css/editor-style-classic.css',
@@ -470,7 +470,7 @@ function library_classic_editor_styles() {
 
 }
 
-add_action( 'init', 'library_classic_editor_styles' );
+add_action( 'init', 'mylibrary_classic_editor_styles' );
 
 /**
  * Output Customizer settings in the classic editor.
@@ -482,9 +482,9 @@ add_action( 'init', 'library_classic_editor_styles' );
  * @param array $mce_init TinyMCE styles.
  * @return array TinyMCE styles.
  */
-function library_add_classic_editor_customizer_styles( $mce_init ) {
+function mylibrary_add_classic_editor_customizer_styles( $mce_init ) {
 
-	$styles = library_get_customizer_css( 'classic-editor' );
+	$styles = mylibrary_get_customizer_css( 'classic-editor' );
 
 	if ( ! isset( $mce_init['content_style'] ) ) {
 		$mce_init['content_style'] = $styles . ' ';
@@ -496,7 +496,7 @@ function library_add_classic_editor_customizer_styles( $mce_init ) {
 
 }
 
-add_filter( 'tiny_mce_before_init', 'library_add_classic_editor_customizer_styles' );
+add_filter( 'tiny_mce_before_init', 'mylibrary_add_classic_editor_customizer_styles' );
 
 /**
  * Output non-latin font styles in the classic editor.
@@ -506,9 +506,9 @@ add_filter( 'tiny_mce_before_init', 'library_add_classic_editor_customizer_style
  * @param array $mce_init TinyMCE styles.
  * @return array TinyMCE styles.
  */
-function library_add_classic_editor_non_latin_styles( $mce_init ) {
+function mylibrary_add_classic_editor_non_latin_styles( $mce_init ) {
 
-	$styles = library_Non_Latin_Languages::get_non_latin_css( 'classic-editor' );
+	$styles = mylibrary_Non_Latin_Languages::get_non_latin_css( 'classic-editor' );
 
 	// Return if there are no styles to add.
 	if ( ! $styles ) {
@@ -525,7 +525,7 @@ function library_add_classic_editor_non_latin_styles( $mce_init ) {
 
 }
 
-add_filter( 'tiny_mce_before_init', 'library_add_classic_editor_non_latin_styles' );
+add_filter( 'tiny_mce_before_init', 'mylibrary_add_classic_editor_non_latin_styles' );
 
 /**
  * Block Editor Settings.
@@ -535,29 +535,29 @@ add_filter( 'tiny_mce_before_init', 'library_add_classic_editor_non_latin_styles
  * 
  * @since My_Library 1.0
  */
-function library_block_editor_settings() {
+function mylibrary_block_editor_settings() {
 
 	// Block Editor Palette.
 	$editor_color_palette = array(
 		array(
 			'name'  => __( 'Accent Color', 'mylibrary' ),
 			'slug'  => 'accent',
-			'color' => library_get_color_for_area( 'content', 'accent' ),
+			'color' => mylibrary_get_color_for_area( 'content', 'accent' ),
 		),
 		array(
 			'name'  => _x( 'Primary', 'color', 'mylibrary' ),
 			'slug'  => 'primary',
-			'color' => library_get_color_for_area( 'content', 'text' ),
+			'color' => mylibrary_get_color_for_area( 'content', 'text' ),
 		),
 		array(
 			'name'  => _x( 'Secondary', 'color', 'mylibrary' ),
 			'slug'  => 'secondary',
-			'color' => library_get_color_for_area( 'content', 'secondary' ),
+			'color' => mylibrary_get_color_for_area( 'content', 'secondary' ),
 		),
 		array(
 			'name'  => __( 'Subtle Background', 'mylibrary' ),
 			'slug'  => 'subtle-background',
-			'color' => library_get_color_for_area( 'content', 'borders' ),
+			'color' => mylibrary_get_color_for_area( 'content', 'borders' ),
 		),
 	);
 
@@ -615,13 +615,13 @@ function library_block_editor_settings() {
 	// 如果我们有深色背景颜色，则添加对深色编辑器样式的支持。
 	// We can determine if the background color is dark by checking if the text-color is white.
 	// 我们可以通过检查文本颜色是否为白色来确定背景颜色是否为深。
-	if ( '#ffffff' === strtolower( library_get_color_for_area( 'content', 'text' ) ) ) {
+	if ( '#ffffff' === strtolower( mylibrary_get_color_for_area( 'content', 'text' ) ) ) {
 		add_theme_support( 'dark-editor-style' );
 	}
 
 }
 
-add_action( 'after_setup_theme', 'library_block_editor_settings' );
+add_action( 'after_setup_theme', 'mylibrary_block_editor_settings' );
 
 /**
  * Overwrite default more tag with styling and screen reader markup.
@@ -630,11 +630,11 @@ add_action( 'after_setup_theme', 'library_block_editor_settings' );
  * @param string $html The default output HTML for the more tag.
  * @return string
  */
-function library_read_more_tag( $html ) {
+function mylibrary_read_more_tag( $html ) {
 	return preg_replace( '/<a(.*)>(.*)<\/a>/iU', sprintf( '<div class="read-more-button-wrap"><a$1><span class="faux-button">$2</span> <span class="screen-reader-text">"%1$s"</span></a></div>', get_the_title( get_the_ID() ) ), $html );
 }
 
-add_filter( 'the_content_more_link', 'library_read_more_tag' );
+add_filter( 'the_content_more_link', 'mylibrary_read_more_tag' );
 
 /**
  * Enqueues scripts for customizer controls & settings.
@@ -643,7 +643,7 @@ add_filter( 'the_content_more_link', 'library_read_more_tag' );
  *
  * @return void
  */
-function library_customize_controls_enqueue_scripts() {
+function mylibrary_customize_controls_enqueue_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	// Add main customizer js file.
@@ -654,10 +654,10 @@ function library_customize_controls_enqueue_scripts() {
 
 	// Add script for controls.
 	wp_enqueue_script( 'library-customize-controls', get_template_directory_uri() . '/assets/js/customize-controls.js', array( 'library-color-calculations', 'customize-controls', 'underscore', 'jquery' ), $theme_version, false );
-	wp_localize_script( 'library-customize-controls', 'libraryBgColors', library_get_customizer_color_vars() );
+	wp_localize_script( 'library-customize-controls', 'libraryBgColors', mylibrary_get_customizer_color_vars() );
 }
 
-add_action( 'customize_controls_enqueue_scripts', 'library_customize_controls_enqueue_scripts' );
+add_action( 'customize_controls_enqueue_scripts', 'mylibrary_customize_controls_enqueue_scripts' );
 
 /**
  * Enqueue scripts for the customizer preview.
@@ -666,24 +666,24 @@ add_action( 'customize_controls_enqueue_scripts', 'library_customize_controls_en
  *
  * @return void
  */
-function library_customize_preview_init() {
+function mylibrary_customize_preview_init() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_script( 'library-customize-preview', get_theme_file_uri( '/assets/js/customize-preview.js' ), array( 'customize-preview', 'customize-selective-refresh', 'jquery' ), $theme_version, true );
-	wp_localize_script( 'library-customize-preview', 'libraryBgColors', library_get_customizer_color_vars() );
-	wp_localize_script( 'library-customize-preview', 'libraryPreviewEls', library_get_elements_array() );
+	wp_localize_script( 'library-customize-preview', 'libraryBgColors', mylibrary_get_customizer_color_vars() );
+	wp_localize_script( 'library-customize-preview', 'libraryPreviewEls', mylibrary_get_elements_array() );
 
 	wp_add_inline_script(
 		'library-customize-preview',
 		sprintf(
 			'wp.customize.selectiveRefresh.partialConstructor[ %1$s ].prototype.attrs = %2$s;',
 			wp_json_encode( 'cover_opacity' ),
-			wp_json_encode( library_customize_opacity_range() )
+			wp_json_encode( mylibrary_customize_opacity_range() )
 		)
 	);
 }
 
-add_action( 'customize_preview_init', 'library_customize_preview_init' );
+add_action( 'customize_preview_init', 'mylibrary_customize_preview_init' );
 
 /**
  * Get accessible color for an area.
@@ -694,7 +694,7 @@ add_action( 'customize_preview_init', 'library_customize_preview_init' );
  * @param string $context Can be 'text' or 'accent'.
  * @return string Returns a HEX color.
  */
-function library_get_color_for_area( $area = 'content', $context = 'text' ) {
+function mylibrary_get_color_for_area( $area = 'content', $context = 'text' ) {
 
 	// Get the value from the theme-mod.
 	$settings = get_theme_mod(
@@ -731,7 +731,7 @@ function library_get_color_for_area( $area = 'content', $context = 'text' ) {
  *
  * @return array
  */
-function library_get_customizer_color_vars() {
+function mylibrary_get_customizer_color_vars() {
 	$colors = array(
 		'content'       => array(
 			'setting' => 'background_color',
@@ -750,7 +750,7 @@ function library_get_customizer_color_vars() {
  *
  * @return array
  */
-function library_get_elements_array() {
+function mylibrary_get_elements_array() {
 
 	// The array is formatted like this:
 	// [key-in-saved-setting][sub-key-in-setting][css-property] = [elements].
@@ -815,58 +815,12 @@ function library_get_elements_array() {
 	 *
 	 * @param array Array of elements.
 	 */
-	return apply_filters( 'library_get_elements_array', $elements );
+	return apply_filters( 'mylibrary_get_elements_array', $elements );
 }
 
 
 
-/**
- * Register a custom post type called "book".
- *
- * @see get_post_type_labels() for label keys.
- */
-function ebooks_add_post_type()
-{
-	$labels = array(
-		'name'                  => _x('Books', 'Post type general name', "mylibrary"),
-		'singular_name'         => _x('Book', 'Post type singular name', "mylibrary"),
-		'menu_name'             => _x('Books', 'Admin Menu text', "mylibrary"),
-		'name_admin_bar'        => _x('Book', 'Add New on Toolbar', "mylibrary"),
-		'add_new'               => __('Add new book', "mylibrary"),
-		'add_new_item'          => __('Add new book', "mylibrary"),
-		'new_item'              => __('Add new book', "mylibrary"),
 
-	);
-
-	$args = array(
-		'labels'             => $labels,
-		//是否公开
-		'public'             => true,
-		//是否可查询
-		'publicly_queryable' => true,
-		//显示在后台菜单中
-		'show_ui'            => true,
-		//显示在后台菜单中
-		'show_in_menu'       => true,
-		//是否可以查询，和publicly_queryable一起使用
-		'query_var'          => true,
-		//重写url
-		'rewrite'            => array('slug' => 'book'),
-		//该文章类型的权限
-		'capability_type'    => 'post',
-		'taxonomies'		 => array( 'category', 'post_tag' ),
-		//是否有归档
-		'has_archive'        => true,
-		//是否水平，如果水平就是页面，否则类似文章这种可以有分类目录（需要自定义分类目录）
-		'hierarchical'       => false,
-		'menu_icon'	=> 'dashicons-media-document',
-		//菜单定位
-		'menu_position'      => 5,
-		//该文章类型支持的功能
-		'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
-	);
-	register_post_type('book', $args);
-}
 
 function ashuwp_posts_per_page($query)
 {
@@ -878,129 +832,3 @@ function ashuwp_posts_per_page($query)
 }
 add_action('pre_get_posts', 'ashuwp_posts_per_page');
 
-
-function library_add_query_vars() {
-
-	add_filter('query_vars', function ($query_vars) {
-		$query_vars[] = 'chapter';
-		return $query_vars;
-	});
-}
-
-add_action( 'init', 'library_add_query_vars' );
-
-add_action( 'template_include' , function ($template) {
-	if (get_query_var('chapter') == false || get_query_var('chapter') == '') {
-		return $template;
-	}
-	return get_template_directory() . '/template-parts/content-chapter.php';
-});
-
-add_filter('body_class','ebooks_add_body_classes');
-
-function ebooks_add_body_classes($classes) {
-	// 给章节内容页的 body 添加上 singular class属性
-	if (get_query_var('chapter')) {
-		$classes[] = 'singular';
-	}
-	return $classes;
-}
-
-
-//注册后台管理模块  
-add_action('admin_menu', 'add_theme_options_menu');
-function add_theme_options_menu()
-{
-	add_submenu_page(
-		'edit.php?post_type=book', 
-		__("Chapter list", "mylibrary"), 
-		__("Chapter list", "mylibrary"),
-		'manage_options',
-		'manage-chapters', //别名，也就是在URL中GET传送的参数  
-		'ebooks_manage_chapters' //调用显示内容调用的函数  
-	);
-}
-
-function ebooks_manage_chapter_post()
-{
-	global $wpdb;
-	$post_id = (int)$_GET['post_id'];
-	$chapter_id = isset($_GET['chapter_id']) ? (int)$_GET['chapter_id'] : 0;
-	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-		if ($chapter_id > 0) {
-			//更新章节
-			$wpdb->update(
-				$wpdb->prefix . 'chapters',
-				array(
-					'chapter_title'     => esc_sql($_POST['chapter_title']),
-					'chapter_content'   => stripslashes($_POST['chapter_content']),
-					'chapter_modified'       => current_time('mysql'),
-					'chapter_modified_gmt'       => current_time('mysql', 1),
-				),
-				array(
-					'chapter_id' => $chapter_id
-				)
-			);
-		} else {
-			//新增章节
-			$wpdb->insert(
-				$wpdb->prefix . 'chapters',
-				array(
-					'post_id'           => $post_id,
-					'chapter_title'     => esc_sql($_POST['chapter_title']),
-					'chapter_content'   => addslashes($_POST['chapter_content']),
-					'chapter_date'       => current_time('mysql'),
-					'chapter_date_gmt'       => current_time('mysql', 1),
-					'chapter_modified'       => current_time('mysql'),
-					'chapter_modified_gmt'       => current_time('mysql', 1),
-				)
-			);
-		}
-
-		echo "<div id=\"message\" class=\"updated notice notice-success is-dismissible\"><p>数据保存成功</p></div>";
-	} 
-
-	$chapters = ebooks_get_chapters($post_id);
-	if ($chapter_id > 0) {
-		//当前章节
-		$chapter = $wpdb->get_row(
-			$wpdb->prepare("SELECT * FROM {$wpdb->prefix}chapters WHERE chapter_id=%d", $chapter_id)
-		);
-	}
-	
-	require get_template_directory() . "/inc/manage-chapters.php";
-}
-function ebooks_manage_chapters()
-{
-	if (isset($_GET['post_id']) && $_GET['post_id'] > 0) {
-		ebooks_manage_chapter_post();
-	}else{
-		//显示章节列表
-		require get_template_directory() . "/inc/chapter-list.php";
-	}
-}
-
-//添加文章列表
-function ebooks_add_chapters_column($columns)
-{
-	$columns['post_chapters'] = __("Operate", "mylibrary");
-	return $columns;
-}
-add_filter('manage_book_posts_columns', 'ebooks_add_chapters_column');
-
-function views_column_content($column, $post_id)
-{
-	switch ($column) {
-		case 'post_chapters':
-			echo "<a href=\"edit.php?post_type=book&page=manage-chapters&post_id={$post_id}\">".__("Chapter list", "mylibrary")."</a>";
-			break;
-	}
-}
-add_action('manage_book_posts_custom_column', 'views_column_content', 10, 2);
-
-
-
-// 测试代码
-
-// var_dump(sanitize_hex_color("#cd2653"));
-// exit();

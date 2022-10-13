@@ -24,7 +24,7 @@
 
 			<button class="toggle search-untoggle close-search-toggle fill-children-current-color" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field">
 				<span class="screen-reader-text"><?php _e( 'Close search', 'mylibrary' ); ?></span>
-				<?php library_the_theme_svg( 'cross' ); ?>
+				<?php mylibrary_the_theme_svg( 'cross' ); ?>
 			</button><!-- .search-toggle -->
 
 		</div><!-- .section-inner -->

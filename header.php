@@ -48,7 +48,7 @@
 						<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
 							<span class="toggle-inner">
 								<span class="toggle-icon">
-									<?php library_the_theme_svg( 'search' ); ?>
+									<?php mylibrary_the_theme_svg( 'search' ); ?>
 								</span>
 								<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'mylibrary' ); ?></span>
 							</span>
@@ -60,10 +60,10 @@
 
 						<?php
 							// Site title or logo.
-							library_site_logo();
+							mylibrary_site_logo();
 
 							// Site description.
-							library_site_description();
+							mylibrary_site_description();
 						?>
 
 					</div><!-- .header-titles -->
@@ -71,7 +71,7 @@
 					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 						<span class="toggle-inner">
 							<span class="toggle-icon">
-								<?php library_the_theme_svg( 'ellipsis' ); ?>
+								<?php mylibrary_the_theme_svg( 'ellipsis' ); ?>
 							</span>
 							<span class="toggle-text"><?php _e( 'Menu', 'mylibrary' ); ?></span>
 						</span>
@@ -107,7 +107,7 @@
 											'match_menu_classes' => true,
 											'show_sub_menu_icons' => true,
 											'title_li' => false,
-											'walker'   => new library_Walker_Page(),
+											'walker'   => new mylibrary_Walker_Page(),
 										)
 									);
 
@@ -136,7 +136,7 @@
 									<span class="toggle-inner">
 										<span class="toggle-text"><?php _e( 'Menu', 'mylibrary' ); ?></span>
 										<span class="toggle-icon">
-											<?php library_the_theme_svg( 'ellipsis' ); ?>
+											<?php mylibrary_the_theme_svg( 'ellipsis' ); ?>
 										</span>
 									</span>
 								</button><!-- .nav-toggle -->
@@ -153,7 +153,7 @@
 
 								<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
 									<span class="toggle-inner">
-										<?php library_the_theme_svg( 'search' ); ?>
+										<?php mylibrary_the_theme_svg( 'search' ); ?>
 										<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'mylibrary' ); ?></span>
 									</span>
 								</button><!-- .search-toggle -->

@@ -1,8 +1,10 @@
 <div class="wrap">
 
     <h1 class="wp-heading-inline">
-        <?php echo  $chapter_id ? '编辑章节':'新增章节' ;?>
-        
+        <?php 
+            echo "《<a href=\"/wp-admin/post.php?post={$book->post_id}&action=edit\">{$book->post_title}</a>》"; 
+            echo $chapter_id ? '编辑章节':'新增章节';
+        ?>
     </h1>
 
     <form action="" method="post" enctype="multipart/form-data">
@@ -30,7 +32,7 @@
                     <table class="wp-list-table widefat fixed striped table-view-list posts">
                         <thead>
                             <tr>
-                                <td><?php _e("Chapter list", "ebooks") ?></td>
+                                <td><?php _e("Chapter list", "mylibrary") ?></td>
                             </tr>  
                         </thead>
                         <tbody>

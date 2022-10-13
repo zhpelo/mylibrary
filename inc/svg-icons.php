@@ -7,10 +7,10 @@
  * @since My_Library 1.0
  */
 
-if ( ! function_exists( 'library_the_theme_svg' ) ) {
+if ( ! function_exists( 'mylibrary_the_theme_svg' ) ) {
 	/**
 	 * Output and Get Theme SVG.
-	 * Output and get the SVG markup for an icon in the library_SVG_Icons class.
+	 * Output and get the SVG markup for an icon in the mylibrary_SVG_Icons class.
 	 *
 	 * @since My_Library 1.0
 	 *
@@ -18,12 +18,12 @@ if ( ! function_exists( 'library_the_theme_svg' ) ) {
 	 * @param string $group    The group the icon belongs to.
 	 * @param string $color    Color code.
 	 */
-	function library_the_theme_svg( $svg_name, $group = 'ui', $color = '' ) {
-		echo library_get_theme_svg( $svg_name, $group, $color ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped in library_get_theme_svg().
+	function mylibrary_the_theme_svg( $svg_name, $group = 'ui', $color = '' ) {
+		echo mylibrary_get_theme_svg( $svg_name, $group, $color ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped in mylibrary_get_theme_svg().
 	}
 }
 
-if ( ! function_exists( 'library_get_theme_svg' ) ) {
+if ( ! function_exists( 'mylibrary_get_theme_svg' ) ) {
 
 	/**
 	 * Get information about the SVG icon.
@@ -34,11 +34,11 @@ if ( ! function_exists( 'library_get_theme_svg' ) ) {
 	 * @param string $group    The group the icon belongs to.
 	 * @param string $color    Color code.
 	 */
-	function library_get_theme_svg( $svg_name, $group = 'ui', $color = '' ) {
+	function mylibrary_get_theme_svg( $svg_name, $group = 'ui', $color = '' ) {
 
 		// Make sure that only our allowed tags and attributes are included.
 		$svg = wp_kses(
-			library_SVG_Icons::get_svg( $svg_name, $group, $color ),
+			mylibrary_SVG_Icons::get_svg( $svg_name, $group, $color ),
 			array(
 				'svg'     => array(
 					'class'       => true,

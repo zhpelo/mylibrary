@@ -60,7 +60,7 @@ if ( $comments ) {
 			<?php
 			wp_list_comments(
 				array(
-					'walker'      => new library_Walker_Comment(),
+					'walker'      => new mylibrary_Walker_Comment(),
 					'avatar_size' => 120,
 					'style'       => 'div',
 				)

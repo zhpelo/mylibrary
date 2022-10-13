@@ -9,13 +9,13 @@
 
 if ( class_exists( 'WP_Customize_Control' ) ) {
 
-	if ( ! class_exists( 'library_Separator_Control' ) ) {
+	if ( ! class_exists( 'mylibrary_Separator_Control' ) ) {
 		/**
 		 * Separator Control.
 		 *
 		 * @since My_Library 1.0
 		 */
-		class library_Separator_Control extends WP_Customize_Control {
+		class mylibrary_Separator_Control extends WP_Customize_Control {
 			/**
 			 * Render the hr.
 			 *
