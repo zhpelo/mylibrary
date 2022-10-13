@@ -133,6 +133,7 @@ function mylibrary_manage_chapters()
 }
 function mylibrary_manage_chapter_list(){
     //显示章节列表
+	$chapter_list = mylibrary_get_chapter_list();
     require get_template_directory() . "/inc/chapter-list.php";
 }
 

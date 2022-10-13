@@ -819,9 +819,6 @@ function mylibrary_get_elements_array() {
 }
 
 
-
-
-
 function ashuwp_posts_per_page($query)
 {
 	//首页或者搜索页的主循环

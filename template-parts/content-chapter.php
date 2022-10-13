@@ -8,7 +8,6 @@ $chapter_ids = array_column($chapters, 'chapter_id');
 $chapter_titles = array_column($chapters, 'chapter_title');
 $current_key = array_search($chapter_id, $chapter_ids);
 
-
 $prev = $next = [];
 if ($current_key >= 1) {
     $prev['id'] = $chapter_ids[$current_key - 1];

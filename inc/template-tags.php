@@ -903,3 +903,10 @@ function mylibrary_get_chapters($post_id)
 }
 
 
+function mylibrary_get_chapter_list(){
+	global $wpdb;
+	$chapters = $wpdb->get_results(
+		$wpdb->prepare("SELECT `chapter_id`,`post_id`,`chapter_title`,`chapter_date`,`chapter_modified` FROM {$wpdb->prefix}chapters WHERE chapter_author=%d", get_current_user_id())
+	);
+	return $chapters;
+}
