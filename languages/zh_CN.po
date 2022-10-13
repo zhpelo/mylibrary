@@ -1,0 +1,738 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Library\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-23 04:15+0000\n"
+"PO-Revision-Date: 2022-10-13 14:01+0000\n"
+"Last-Translator: 小叮当\n"
+"Language-Team: 简体中文\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.0.2\n"
+"X-Domain: library"
+
+#. %d: ID of a post.
+#: classes/class-library-walker-page.php:78
+#, php-format
+msgid "#%d (no title)"
+msgstr ""
+
+#. 1: Comment date, 2: Comment time.
+#: classes/class-library-walker-comment.php:72
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/starter-content.php:130
+msgid ""
+"&#8220;Cyborgs, as the philosopher Donna Haraway established, are not "
+"reverent. They do not remember the cosmos.&#8221;"
+msgstr ""
+
+#: 404.php:24
+msgid "404 not found"
+msgstr ""
+
+#: inc/block-patterns.php:118
+msgid "<em>Dates</em><br>Aug 1 — Dec 1"
+msgstr ""
+
+#: inc/block-patterns.php:123
+msgid "<em>Location</em><br>Exhibit Hall B"
+msgstr ""
+
+#: inc/block-patterns.php:128
+msgid "<em>Price</em><br>Included"
+msgstr ""
+
+#: inc/template-tags.php:414
+msgctxt "A string that is output before one or more categories"
+msgid "In"
+msgstr ""
+
+#: inc/block-patterns.php:151 inc/block-patterns.php:165
+msgid "Abstract Rectangles"
+msgstr ""
+
+#: functions.php:543
+msgid "Accent Color"
+msgstr ""
+
+#: functions.php:835 functions.php:836 functions.php:837
+msgid "Add new book"
+msgstr "新增书籍"
+
+#: inc/manage-chapters.php:48
+msgid "add new chapter"
+msgstr "添加新章节"
+
+#: functions.php:834
+msgctxt "Add New on Toolbar"
+msgid "Book"
+msgstr "书籍"
+
+#: functions.php:833
+msgctxt "Admin Menu text"
+msgid "Books"
+msgstr "书籍"
+
+#: inc/block-patterns.php:89
+msgid ""
+"An awe-inspiring collection of books, prints, and gifts from our exhibitions."
+msgstr ""
+
+#: classes/class-library-customize.php:190
+msgid "Apply a custom color for links, buttons, featured images."
+msgstr "为链接、按钮、特色图片设置自定义颜色。"
+
+#: inc/starter-content.php:70 inc/starter-content.php:102
+msgid "August 1 -- December 1"
+msgstr ""
+
+#: inc/block-patterns.php:157 inc/block-patterns.php:171
+msgid "August 1 — December 1"
+msgstr ""
+
+#: inc/block-patterns.php:74
+msgid "Award-winning exhibitions featuring internationally-renowned artists."
+msgstr ""
+
+#: functions.php:571
+msgid "Background Color"
+msgstr ""
+
+#: inc/block-patterns.php:48
+msgid "Become a Member"
+msgstr ""
+
+#: inc/starter-content.php:145
+msgid "Become a Member and Get Exclusive Offers!"
+msgstr ""
+
+#. %s: Author name.
+#: inc/template-tags.php:375 template-parts/entry-author-bio.php:20
+#, php-format
+msgid "By %s"
+msgstr "作者 %s"
+
+#: classes/class-library-walker-comment.php:137
+msgid "By Post Author"
+msgstr ""
+
+#: inc/block-patterns.php:33
+msgid "Call to Action"
+msgstr ""
+
+#: inc/template-tags.php:410 template-parts/content-cover.php:70
+#: template-parts/entry-header.php:36
+msgid "Categories"
+msgstr ""
+
+#: functions.php:916 functions.php:917 functions.php:995
+#: template-parts/content-book.php:32
+msgid "Chapter list"
+msgstr "章节列表"
+
+#: template-parts/modal-menu.php:21
+msgid "Close Menu"
+msgstr "关闭菜单"
+
+#: template-parts/modal-search.php:26
+msgid "Close search"
+msgstr "关闭搜索"
+
+#: classes/class-library-customize.php:132
+msgctxt "color"
+msgid "Custom"
+msgstr ""
+
+#: classes/class-library-customize.php:131
+msgctxt "color"
+msgid "Default"
+msgstr ""
+
+#: functions.php:548
+msgctxt "color"
+msgid "Primary"
+msgstr ""
+
+#: functions.php:553
+msgctxt "color"
+msgid "Secondary"
+msgstr ""
+
+#: comments.php:88
+msgid "Comments"
+msgstr ""
+
+#: comments.php:127
+msgid "Comments are closed."
+msgstr ""
+
+#. 1: Number of comments, 2: Post title.
+#: comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid "%1$s reply on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s replies on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+
+#. %s: Post title.
+#: comments.php:37
+#, php-format
+msgctxt "comments title"
+msgid "One reply on &ldquo;%s&rdquo;"
+msgstr ""
+
+#: template-parts/content-book.php:28 template-parts/content.php:36
+msgid "Continue reading"
+msgstr ""
+
+#. Copyright date format, see https://www.php.net/manual/datetime.format.php
+#: footer.php:25
+msgctxt "copyright date format"
+msgid "Y"
+msgstr ""
+
+#. Name of the template
+#: classes/class-library-customize.php:289
+msgid "Cover Template"
+msgstr "封面模板"
+
+#: classes/class-library-customize.php:314
+msgid "Creates a parallax effect when the visitor scrolls."
+msgstr "当访问者滚动时创建视差效果。"
+
+#: functions.php:293
+msgid "Desktop Expanded Menu"
+msgstr ""
+"桌面版扩展菜单\n"
+
+#: functions.php:292
+msgid "Desktop Horizontal Menu"
+msgstr "桌面版水平菜单"
+
+#: inc/block-patterns.php:61
+msgid "Double Call to Action"
+msgstr ""
+
+#: classes/class-library-walker-comment.php:86
+msgid "Edit"
+msgstr "编辑"
+
+#. %s: Post title. Only visible to screen readers.
+#: inc/template-tags.php:223
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "编辑 <span class=\"screen-reader-text\">%s</span>"
+
+#: inc/block-patterns.php:108
+msgid "Event Details"
+msgstr ""
+
+#: template-parts/modal-menu.php:117
+msgid "Expanded Social links"
+msgstr ""
+
+#: inc/block-patterns.php:142
+msgid "Featured Content"
+msgstr ""
+
+#: classes/class-library-customize.php:313
+msgid "Fixed Background Image"
+msgstr "固定背景图像"
+
+#: template-parts/footer-menus-widgets.php:37
+msgid "Footer"
+msgstr ""
+
+#: functions.php:411
+msgid "Footer #1"
+msgstr ""
+
+#: functions.php:423
+msgid "Footer #2"
+msgstr ""
+
+#: functions.php:295
+msgid "Footer Menu"
+msgstr "底部菜单"
+
+#: inc/starter-content.php:114
+msgid "From Signac to Matisse"
+msgstr ""
+
+#: classes/class-library-customize.php:277
+msgid "Full text"
+msgstr "全文"
+
+#. Name of the template
+msgid "Full Width Template"
+msgstr ""
+
+#: classes/class-library-customize.php:107
+msgid "Header &amp; Footer Background Color"
+msgstr ""
+
+#. Author URI of the theme
+#: footer.php:38
+msgid "https://wordpress.org/"
+msgstr ""
+
+#. URI of the theme
+msgid "https://wordpress.org/themes/library/"
+msgstr ""
+
+#: inc/block-patterns.php:187
+msgid "Introduction"
+msgstr ""
+
+#: inc/starter-content.php:151
+msgid "Join the Club"
+msgstr ""
+
+#: comments.php:34
+msgid "Leave a comment"
+msgstr ""
+
+#. Name of the theme
+#: inc/block-patterns.php:20
+msgid "Library"
+msgstr ""
+
+#: classes/class-library-customize.php:404
+msgid ""
+"Make sure that the contrast is high enough so that the text is readable."
+msgstr "确保对比度足够高，以便文本可读。"
+
+#: inc/block-patterns.php:45 inc/starter-content.php:148
+msgid ""
+"Members get access to exclusive exhibits and sales. Our memberships cost $99."
+"99 and are billed annually."
+msgstr ""
+
+#: header.php:76 header.php:137
+msgid "Menu"
+msgstr "菜单"
+
+#: template-parts/modal-menu.php:48
+msgctxt "menu"
+msgid "Expanded"
+msgstr "扩展"
+
+#: header.php:88
+msgctxt "menu"
+msgid "Horizontal"
+msgstr "水平"
+
+#: template-parts/modal-menu.php:73
+msgctxt "menu"
+msgid "Mobile"
+msgstr "手机"
+
+#: functions.php:294
+msgid "Mobile Menu"
+msgstr "手机版菜单"
+
+#: functions.php:598
+msgctxt "Name of the large font size in the block editor"
+msgid "Large"
+msgstr ""
+
+#: functions.php:604
+msgctxt "Name of the larger font size in the block editor"
+msgid "Larger"
+msgstr ""
+
+#: functions.php:592
+msgctxt "Name of the regular font size in the block editor"
+msgid "Regular"
+msgstr ""
+
+#: functions.php:586
+msgctxt "Name of the small font size in the block editor"
+msgid "Small"
+msgstr ""
+
+#. This text contains HTML to allow the text to be shorter on small screens.
+#. The text inside the span with the class nav-short will be hidden on small screens.
+#: template-parts/pagination.php:19
+msgid "Newer <span class=\"nav-short\">Posts</span>"
+msgstr ""
+
+#: comments.php:74
+msgid "Newer Comments"
+msgstr ""
+
+#: index.php:51
+msgid "Nothing Found"
+msgstr "找不到任何内容"
+
+#: inc/starter-content.php:85 inc/starter-content.php:117
+msgid "October 1 -- December 1"
+msgstr ""
+
+#. This text contains HTML to allow the text to be shorter on small screens.
+#. The text inside the span with the class nav-short will be hidden on small screens.
+#: template-parts/pagination.php:27
+msgid "Older <span class=\"nav-short\">Posts</span>"
+msgstr "之前的<span class=\"nav-short\">文章</span>"
+
+#: comments.php:75
+msgid "Older Comments"
+msgstr ""
+
+#: classes/class-library-customize.php:275
+msgid "On archive pages, posts show:"
+msgstr "在归档页面，帖子列表 中显示："
+
+#: functions.php:986
+msgid "Operate"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Our default theme for 2020 is designed to take full advantage of the "
+"flexibility of the block editor. Organizations and businesses have the "
+"ability to create dynamic landing pages with endless layouts using the group "
+"and column blocks. The centered content column and fine-tuned typography "
+"also makes it perfect for traditional blogs. Complete editor styles give you "
+"a good idea of what your content will look like, even before you publish. "
+"You can give your site a personal touch by changing the background colors "
+"and the accent color in the Customizer. The colors of all elements on your "
+"site are automatically calculated based on the colors you pick, ensuring a "
+"high, accessible color contrast for your visitors."
+msgstr ""
+
+#: classes/class-library-customize.php:360
+msgid "Overlay Background Color"
+msgstr "覆盖背景颜色"
+
+#: classes/class-library-customize.php:403
+msgid "Overlay Opacity"
+msgstr "覆盖不透明度"
+
+#: classes/class-library-customize.php:382
+msgid "Overlay Text Color"
+msgstr "覆盖文本颜色"
+
+#: template-parts/content-book.php:51 template-parts/content-cover.php:138
+#: template-parts/content.php:48
+msgid "Page"
+msgstr ""
+
+#: 404.php:17
+msgid "Page Not Found"
+msgstr ""
+
+#: template-parts/content-book.php:51 template-parts/content-cover.php:138
+#: template-parts/content.php:48
+msgid "Pages:"
+msgstr ""
+
+#: searchform.php:29
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "请输入关键词  &hellip;"
+
+#: template-parts/navigation.php:25
+msgid "Post"
+msgstr ""
+
+#: inc/template-tags.php:368
+msgid "Post author"
+msgstr "文章作者"
+
+#: inc/template-tags.php:392
+msgid "Post date"
+msgstr "发布日期"
+
+#: functions.php:831
+msgctxt "Post type general name"
+msgid "Books"
+msgstr "书籍"
+
+#: functions.php:832
+msgctxt "Post type singular name"
+msgid "Book"
+msgstr "书籍"
+
+#: footer.php:39
+msgid "Powered by WordPress"
+msgstr ""
+
+#: inc/starter-content.php:177 inc/starter-content.php:187
+msgid "Primary"
+msgstr "主要"
+
+#: classes/class-library-customize.php:129
+msgid "Primary Color"
+msgstr "主要颜色"
+
+#: inc/block-patterns.php:78 inc/block-patterns.php:160
+#: inc/block-patterns.php:174 inc/starter-content.php:73
+#: inc/starter-content.php:88 inc/starter-content.php:105
+#: inc/starter-content.php:120
+msgid "Read More"
+msgstr "阅读更多"
+
+#: classes/class-library-customize.php:86
+msgid "Retina logo"
+msgstr ""
+
+#: inc/manage-chapters.php:25
+msgid "Save chapter"
+msgstr "保存章节"
+
+#: classes/class-library-walker-comment.php:60
+msgid "says:"
+msgstr ""
+
+#: classes/class-library-customize.php:87
+msgid ""
+"Scales the logo to half its uploaded size, making it sharp on high-res "
+"screens."
+msgstr ""
+
+#: template-parts/content-cover.php:88
+msgid "Scroll Down"
+msgstr ""
+
+#: template-parts/modal-search.php:11
+msgid "Search"
+msgstr "搜索"
+
+#: index.php:101
+msgid "search again"
+msgstr "再次搜索"
+
+#: searchform.php:28 template-parts/modal-search.php:20
+msgid "Search for:"
+msgstr ""
+
+#: index.php:32
+msgid "Search:"
+msgstr "搜索："
+
+#: classes/class-library-customize.php:291
+msgid ""
+"Settings for the \"Cover Template\" page template. Add a featured image to "
+"use as background."
+msgstr "“封面模板”页面模板的设置。添加特色图像用作背景。"
+
+#: inc/block-patterns.php:93
+msgid "Shop Now"
+msgstr "立即购买"
+
+#: functions.php:599
+msgctxt "Short name of the large font size in the block editor."
+msgid "L"
+msgstr ""
+
+#: functions.php:605
+msgctxt "Short name of the larger font size in the block editor."
+msgid "XL"
+msgstr ""
+
+#: functions.php:593
+msgctxt "Short name of the regular font size in the block editor."
+msgid "M"
+msgstr ""
+
+#: functions.php:587
+msgctxt "Short name of the small font size in the block editor."
+msgid "S"
+msgstr ""
+
+#: classes/class-library-customize.php:254
+msgid "Show author bio"
+msgstr "显示作者简介"
+
+#: classes/class-library-customize.php:233
+msgid "Show search in header"
+msgstr "在网站头部显示搜索按钮"
+
+#: classes/class-library-walker-page.php:115 inc/template-tags.php:580
+msgid "Show sub menu"
+msgstr "显示子菜单"
+
+#: functions.php:384
+msgid "Skip to the content"
+msgstr "跳到内容"
+
+#: template-parts/footer-menus-widgets.php:57
+msgid "Social links"
+msgstr "社交链接"
+
+#: inc/starter-content.php:197
+msgid "Social Links Menu"
+msgstr "社交链接菜单"
+
+#: functions.php:296
+msgid "Social Menu"
+msgstr "社交菜单"
+
+#: inc/template-tags.php:466
+msgid "Sticky post"
+msgstr ""
+
+#: searchform.php:31
+msgctxt "submit button"
+msgid "Search"
+msgstr "搜索"
+
+#: functions.php:558
+msgid "Subtle Background"
+msgstr ""
+
+#: classes/class-library-customize.php:278
+msgid "Summary"
+msgstr "摘要"
+
+#: inc/block-patterns.php:42
+msgid "Support the Museum and Get Exclusive Offers"
+msgstr ""
+
+#: inc/template-tags.php:428
+msgid "Tags"
+msgstr ""
+
+#: classes/class-library-customize.php:361
+msgid "The color used for the overlay. Defaults to the accent color."
+msgstr "用于覆盖的颜色。默认为强调色。"
+
+#: classes/class-library-customize.php:383
+msgid "The color used for the text in the overlay."
+msgstr "覆盖图中文本使用的颜色。"
+
+#: inc/starter-content.php:137
+msgid ""
+"The exhibitions are produced by UMoMA in collaboration with artists and "
+"museums around the world and they often attract international attention. "
+"UMoMA has received a Special Commendation from the European Museum of the "
+"Year, and was among the top candidates for the Swedish Museum of the Year "
+"Award as well as for the Council of Europe Museum Prize."
+msgstr ""
+
+#: inc/block-patterns.php:168 inc/starter-content.php:99
+msgid "The Life I Deserve"
+msgstr ""
+
+#: inc/block-patterns.php:71
+msgid "The Museum"
+msgstr ""
+
+#: inc/starter-content.php:48
+msgid "The New UMoMA Opens its Doors"
+msgstr ""
+
+#: 404.php:19
+msgid ""
+"The page you were looking for could not be found. It might have been removed,"
+" renamed, or did not exist in the first place."
+msgstr ""
+
+#: inc/starter-content.php:56
+msgid ""
+"The premier destination for modern art in Northern Sweden. Open from 10 AM "
+"to 6 PM every day during the summer months."
+msgstr ""
+
+#: inc/block-patterns.php:194
+msgid "The Premier Destination for Modern Art in Sweden"
+msgstr ""
+
+#: inc/block-patterns.php:86
+msgid "The Store"
+msgstr ""
+
+#. Author of the theme
+msgid "the WordPress team"
+msgstr ""
+
+#: inc/starter-content.php:82
+msgid "Theatre of Operations"
+msgstr ""
+
+#: classes/class-library-customize.php:210
+msgid "Theme Options"
+msgstr "主题选项"
+
+#: inc/starter-content.php:39
+msgctxt "Theme starter content"
+msgid "The New UMoMA Opens its Doors"
+msgstr ""
+
+#. %s: HTML character for up arrow.
+#: footer.php:49
+#, php-format
+msgid "To the top %s"
+msgstr "返回顶部 %s"
+
+#: header.php:53 header.php:157
+msgctxt "toggle text"
+msgid "Search"
+msgstr "搜索"
+
+#. %s: HTML character for up arrow.
+#: footer.php:55
+#, php-format
+msgid "Up %s"
+msgstr ""
+
+#: template-parts/entry-author-bio.php:29
+msgid "View Archive <span aria-hidden=\"true\">&rarr;</span>"
+msgstr ""
+
+#: index.php:48
+msgid ""
+"We could not find any results for your search. You can give it another try "
+"through the search form below."
+msgstr "我们找不到您的搜索结果。你可以通过下面的搜索表再试一次。"
+
+#. %s: Number of search results.
+#: index.php:39
+#, php-format
+msgid "We found %s result for your search."
+msgid_plural "We found %s results for your search."
+msgstr[0] "我们为您的搜索找到了 %s 个结果。"
+
+#: functions.php:413
+msgid ""
+"Widgets in this area will be displayed in the first column in the footer."
+msgstr ""
+
+#: functions.php:425
+msgid ""
+"Widgets in this area will be displayed in the second column in the footer."
+msgstr ""
+
+#: inc/starter-content.php:134
+msgid ""
+"With seven floors of striking architecture, UMoMA shows exhibitions of "
+"international contemporary art, sometimes along with art historical "
+"retrospectives. Existential, political and philosophical issues are "
+"intrinsic to our programme. As visitor you are invited to guided tours "
+"artist talks, lectures, film screenings and other events with free admission"
+msgstr ""
+
+#: inc/block-patterns.php:197
+msgid ""
+"With seven floors of striking architecture, UMoMA shows exhibitions of "
+"international contemporary art, sometimes along with art historical "
+"retrospectives. Existential, political, and philosophical issues are "
+"intrinsic to our program. As visitor, you are invited to guided tours artist "
+"talks, lectures, film screenings, and other events with free admission."
+msgstr ""
+
+#: inc/block-patterns.php:154 inc/starter-content.php:67
+msgid "Works and Days"
+msgstr ""
+
+#: classes/class-library-walker-comment.php:102
+msgid "Your comment is awaiting moderation."
+msgstr ""
