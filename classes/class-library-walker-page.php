@@ -2,9 +2,9 @@
 /**
  * Custom page walker for this theme.
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Library 1.0
+ * @package My_Library
+ * @subpackage My_Library
+ * @since My_Library 1.0
  */
 
 if ( ! class_exists( 'library_Walker_Page' ) ) {
@@ -12,14 +12,14 @@ if ( ! class_exists( 'library_Walker_Page' ) ) {
 	 * CUSTOM PAGE WALKER
 	 * A custom walker for pages.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 */
 	class library_Walker_Page extends Walker_Page {
 
 		/**
 		 * Outputs the beginning of the current element in the tree.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 * @since Library 1.9 Renamed `$page` to `$data_object` and `$current_page` to `$current_object_id`
 		 *                          to match parent class for PHP 8 named parameter support.
 		 *

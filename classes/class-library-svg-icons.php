@@ -2,9 +2,9 @@
 /**
  * Custom icons for this theme.
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Library 1.0
+ * @package My_Library
+ * @subpackage My_Library
+ * @since My_Library 1.0
  */
 
 if ( ! class_exists( 'library_SVG_Icons' ) ) {
@@ -12,14 +12,14 @@ if ( ! class_exists( 'library_SVG_Icons' ) ) {
 	 * SVG ICONS CLASS
 	 * Retrieve the SVG code for the specified icon. Based on a solution in Twenty Nineteen.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 */
 	class library_SVG_Icons {
 		/**
 		 * GET SVG CODE
 		 * Get the SVG code for the specified icon
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @param string $icon  Icon name.
 		 * @param string $group Icon group.
@@ -73,7 +73,7 @@ if ( ! class_exists( 'library_SVG_Icons' ) ) {
 		 * GET SOCIAL LINK SVG
 		 * Detects the social network from a URL and returns the SVG code for its icon.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @param string $uri The URL to retrieve SVG for.
 		 */
@@ -122,7 +122,7 @@ if ( ! class_exists( 'library_SVG_Icons' ) ) {
 		 * ICON STORAGE
 		 * Store the code for all SVGs in an array.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 * @var array
 		 */
 		public static $ui_icons = array(
@@ -176,7 +176,7 @@ if ( ! class_exists( 'library_SVG_Icons' ) ) {
 		 * By default, each Icon ID is matched against a .com TLD. To override this behavior,
 		 * specify all the domains it covers (including the .com TLD too, if applicable).
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 * @var array
 		 */
 		public static $social_icons_map = array(
@@ -236,7 +236,7 @@ if ( ! class_exists( 'library_SVG_Icons' ) ) {
 		/**
 		 * Social Icons – svg sources.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 * @var array
 		 */
 		public static $social_icons = array(

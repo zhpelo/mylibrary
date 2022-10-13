@@ -2,23 +2,23 @@
 /**
  * Customizer settings for this theme.
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Library 1.0
+ * @package My_Library
+ * @subpackage My_Library
+ * @since My_Library 1.0
  */
 
 if ( ! class_exists( 'library_Customize' ) ) {
 	/**
 	 * CUSTOMIZER SETTINGS
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 */
 	class library_Customize {
 
 		/**
 		 * Register customizer options.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 		 */
@@ -140,7 +140,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 			 * The control is a hue-only colorpicker, and there is a separate setting that holds values
 			 * for other colors calculated based on the selected hue and various background-colors on the page.
 			 *
-			 * @since Library 1.0
+			 * @since My_Library 1.0
 			 */
 
 			// Add the setting for the hue colorpicker.
@@ -420,7 +420,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 		/**
 		 * Sanitization callback for the "accent_accessible_colors" setting.
 		 *“accent_accessible_colors”设置的 清理回调。
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @param array $value The value we want to sanitize.
 		 * @return array Returns sanitized value. Each item in the array gets sanitized separately.
@@ -446,7 +446,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 		/**
 		 * Sanitize select.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @param string $input   The input from the setting.
 		 * @param object $setting The selected setting.
@@ -461,7 +461,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 		/**
 		 * Sanitize boolean for checkbox.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @param bool $checked Whether or not a box is checked.
 		 * @return bool
@@ -484,7 +484,7 @@ if ( ! function_exists( 'library_customize_partial_blogname' ) ) {
 	/**
 	 * Render the site title for the selective refresh partial.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 */
 	function library_customize_partial_blogname() {
 		bloginfo( 'name' );
@@ -495,7 +495,7 @@ if ( ! function_exists( 'library_customize_partial_blogdescription' ) ) {
 	/**
 	 * Render the site description for the selective refresh partial.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 */
 	function library_customize_partial_blogdescription() {
 		bloginfo( 'description' );
@@ -508,7 +508,7 @@ if ( ! function_exists( 'library_customize_partial_site_logo' ) ) {
 	 *
 	 * Doing it this way so we don't have issues with `render_callback`'s arguments.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 */
 	function library_customize_partial_site_logo() {
 		library_site_logo();
@@ -519,7 +519,7 @@ if ( ! function_exists( 'library_customize_partial_site_logo' ) ) {
 /**
  * Input attributes for cover overlay opacity option.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @return array Array containing attribute names and their values.
  */
@@ -527,7 +527,7 @@ function library_customize_opacity_range() {
 	/**
 	 * Filters the input attributes for opacity.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param array $attrs {
 	 *     The attributes.

@@ -4,14 +4,14 @@
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  */
 
 ( function( $, api, _ ) {
 	/**
 	 * Return a value for our partial refresh.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param {Object} partial  Current partial.
 	 *
@@ -33,7 +33,7 @@
 		/**
 		 * Override the refresh method.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @return {jQuery.Promise} Resolved promise.
 		 */
@@ -59,7 +59,7 @@
 		/**
 		 * Input attributes.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 * @type {Object}
 		 */
 		attrs: {},
@@ -67,7 +67,7 @@
 		/**
 		 * Override the refresh method.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @return {jQuery.Promise} Resolved promise.
 		 */
@@ -153,7 +153,7 @@
 	/**
 	 * Add styles to elements in the preview pane.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param {string} context The area for which we want to generate styles. Can be for example "content", "header" etc.
 	 *

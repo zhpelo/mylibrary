@@ -2,9 +2,9 @@
 /**
  * Library Custom CSS
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Library 1.0
+ * @package My_Library
+ * @subpackage My_Library
+ * @since My_Library 1.0
  */
 
 if ( ! function_exists( 'library_generate_css' ) ) {
@@ -12,7 +12,7 @@ if ( ! function_exists( 'library_generate_css' ) ) {
 	/**
 	 * Generate CSS.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param string $selector The CSS selector.
 	 * @param string $style    The CSS style.
@@ -52,7 +52,7 @@ if ( ! function_exists( 'library_get_customizer_css' ) ) {
 	 * Get CSS Built from Customizer Options.
 	 * Build CSS reflecting colors, fonts and other options set in the Customizer, and return them for output.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param string $type Whether to return CSS for the "front-end", "block-editor", or "classic-editor".
 	 */

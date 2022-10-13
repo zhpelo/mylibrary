@@ -6,16 +6,16 @@
  *
  * Based on a solution in WP Rig.
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Library 1.0
+ * @package My_Library
+ * @subpackage My_Library
+ * @since My_Library 1.0
  */
 
 if ( ! class_exists( 'library_Script_Loader' ) ) {
 	/**
 	 * A class that provides a way to add `async` or `defer` attributes to scripts.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 */
 	class library_Script_Loader {
 
@@ -24,7 +24,7 @@ if ( ! class_exists( 'library_Script_Loader' ) ) {
 		 *
 		 * If #12009 lands in WordPress, this function can no-op since it would be handled in core.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @link https://core.trac.wordpress.org/ticket/12009
 		 *

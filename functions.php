@@ -4,9 +4,9 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Library 1.0
+ * @package My_Library
+ * @subpackage My_Library
+ * @since My_Library 1.0
  */
 
 /**
@@ -29,7 +29,7 @@
  *
  * 请注意，此函数与 after_setup_theme 挂钩，该挂钩在 init 挂钩之前运行。 init 钩子对于某些功能来说为时已晚，例如指示对帖子缩略图的支持。
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  */
 function library_theme_support() {
 
@@ -198,7 +198,7 @@ require get_template_directory() . '/inc/block-patterns.php';
 /**
  * Register and Enqueue Styles.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  */
 function library_register_styles() {
 
@@ -222,7 +222,7 @@ add_action( 'wp_enqueue_scripts', 'library_register_styles' );
 /**
  * Register and Enqueue Scripts.
  * 注册和加入 Scripts
- * @since Library 1.0
+ * @since My_Library 1.0
  */
 function library_register_scripts() {
 
@@ -248,7 +248,7 @@ add_action( 'wp_enqueue_scripts', 'library_register_scripts' );
  * thus it does not warrant having an entire dedicated blocking script being loaded.
  * 这不会将脚本排队，因为它很小，而且只适用于IE11，因此，它不保证加载整个专用阻塞脚本。
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @link https://git.io/vWdr2
  */
@@ -265,7 +265,7 @@ add_action( 'wp_print_footer_scripts', 'library_skip_link_focus_fix' );
 /**
  * Enqueue non-latin language styles.
  * 加入 非拉丁语css。
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @return void
  */
@@ -284,7 +284,7 @@ add_action( 'wp_enqueue_scripts', 'library_non_latin_languages' );
  * Register navigation menus uses wp_nav_menu in five places.
  * 注册导航菜单
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  */
 function library_menus() {
 
@@ -306,7 +306,7 @@ add_action( 'init', 'library_menus' );
 /**
  * Get the information about the logo.
  * 获取有关 logo 的信息。
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param string $html The HTML output from get_custom_logo (core function).
  * @return string
@@ -367,7 +367,7 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 	/**
 	 * Shim for wp_body_open, ensuring backward compatibility with versions of WordPress older than 5.2.
 	 * 填充wp_body_open，确保向后兼容早于5.2的WordPress版本。
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 */
 	function wp_body_open() {
 		/** This action is documented in wp-includes/general-template.php */
@@ -378,7 +378,7 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 /**
  * Include a skip to content link at the top of the page so that users can bypass the menu.
  * 在页面顶部包含跳转到内容链接，以便用户可以绕过菜单。
- * @since Library 1.0
+ * @since My_Library 1.0
  */
 function library_skip_link() {
 	echo '<a class="skip-link screen-reader-text" href="#site-content">' . __( 'Skip to the content', 'library' ) . '</a>';
@@ -389,7 +389,7 @@ add_action( 'wp_body_open', 'library_skip_link', 5 );
 /**
  * Register widget areas.
  * 注册小部件区域。
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -434,7 +434,7 @@ add_action( 'widgets_init', 'library_sidebar_registration' );
 /**
  * Enqueue supplemental block editor styles.
  * 将区块编辑器的补充样式 加入队列。
- * @since Library 1.0
+ * @since My_Library 1.0
  */
 function library_block_editor_styles() {
 
@@ -458,7 +458,7 @@ add_action( 'enqueue_block_editor_assets', 'library_block_editor_styles', 1, 1 )
 /**
  * Enqueue classic editor styles.
  * 将经典编辑器样式 排入队列。
- * @since Library 1.0
+ * @since My_Library 1.0
  */
 function library_classic_editor_styles() {
 
@@ -477,7 +477,7 @@ add_action( 'init', 'library_classic_editor_styles' );
  * 经典编辑器中的输出定制器设置。
  * Adds styles to the head of the TinyMCE iframe. Kudos to @Otto42 for the original solution.
  * 将样式添加到 TinyMCE iframe 的头部。 感谢@Otto42 的原始解决方案。
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param array $mce_init TinyMCE styles.
  * @return array TinyMCE styles.
@@ -533,7 +533,7 @@ add_filter( 'tiny_mce_before_init', 'library_add_classic_editor_non_latin_styles
  * Add custom colors and font sizes to the block editor.
  * 将自定义颜色和字体大小添加到块编辑器。
  * 
- * @since Library 1.0
+ * @since My_Library 1.0
  */
 function library_block_editor_settings() {
 
@@ -639,7 +639,7 @@ add_filter( 'the_content_more_link', 'library_read_more_tag' );
 /**
  * Enqueues scripts for customizer controls & settings.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @return void
  */
@@ -662,7 +662,7 @@ add_action( 'customize_controls_enqueue_scripts', 'library_customize_controls_en
 /**
  * Enqueue scripts for the customizer preview.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @return void
  */
@@ -688,7 +688,7 @@ add_action( 'customize_preview_init', 'library_customize_preview_init' );
 /**
  * Get accessible color for an area.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param string $area    The area we want to get the colors for.
  * @param string $context Can be 'text' or 'accent'.
@@ -727,7 +727,7 @@ function library_get_color_for_area( $area = 'content', $context = 'text' ) {
 /**
  * Returns an array of variables for the customizer preview.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @return array
  */
@@ -746,7 +746,7 @@ function library_get_customizer_color_vars() {
 /**
  * Get an array of elements.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @return array
  */
@@ -811,7 +811,7 @@ function library_get_elements_array() {
 	/**
 	 * Filters Library theme elements.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param array Array of elements.
 	 */

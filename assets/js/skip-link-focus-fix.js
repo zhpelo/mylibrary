@@ -7,7 +7,7 @@
  *
  * Learn more: https://git.io/vWdr2
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  */
 ( function() {
 	var isIe = /(trident|msie)/i.test( navigator.userAgent );

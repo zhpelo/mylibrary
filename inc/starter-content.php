@@ -4,9 +4,9 @@
  *
  * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Library 1.0
+ * @package My_Library
+ * @subpackage My_Library
+ * @since My_Library 1.0
  */
 
 /**
@@ -14,7 +14,7 @@
  *
  * Passes it through the `library_starter_content` filter before returning.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @return array A filtered array of args for the starter_content.
  */
@@ -209,7 +209,7 @@ function library_get_starter_content() {
 	/**
 	 * Filters Library array of starter content.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param array $starter_content Array of starter content.
 	 */

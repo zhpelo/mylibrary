@@ -3,7 +3,7 @@
 /**
  * Color Calculations.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param {string} backgroundColor - The background color.
  * @param {number} accentHue - The hue for our accent color.
@@ -29,7 +29,7 @@ function _libraryColor( backgroundColor, accentHue ) {
  * For improved performance we only build half the array
  * depending on dark/light background-color.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @return {Object} - this
  */
@@ -51,7 +51,7 @@ _libraryColor.prototype.setAccentColorsArray = function() {
 				/**
 				 * Get a score for this color in contrast to its background color and surrounding text.
 				 *
-				 * @since Library 1.0
+				 * @since My_Library 1.0
 				 *
 				 * @param {number} contrastBackground - WCAG contrast with the background color.
 				 * @param {number} contrastSurroundingText - WCAG contrast with surrounding text.
@@ -112,7 +112,7 @@ _libraryColor.prototype.setAccentColorsArray = function() {
 /**
  * Get accessible text-color.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @return {Color} - Returns a Color object.
  */
@@ -123,7 +123,7 @@ _libraryColor.prototype.getTextColor = function() {
 /**
  * Get accessible color for the defined accent-hue and background-color.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @return {Color} - Returns a Color object.
  */
@@ -143,7 +143,7 @@ _libraryColor.prototype.getAccentColor = function() {
 /**
  * Return a new instance of the _libraryColor object.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param {string} backgroundColor - The background color.
  * @param {number} accentHue - The hue for our accent color.

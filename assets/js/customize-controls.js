@@ -4,7 +4,7 @@
  *
  * Contains extra logic for our Customizer controls & settings.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  */
 
 ( function() {
@@ -51,7 +51,7 @@
 	/**
 	 * Updates the value of the "accent_accessible_colors" setting.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param {string} context The area for which we want to get colors. Can be for example "content", "header" etc.
 	 * @param {string} backgroundColor The background color (HEX value).

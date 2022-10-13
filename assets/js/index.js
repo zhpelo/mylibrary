@@ -646,7 +646,7 @@ library.toggles = {
  *
  * This implementation is coming from https://gomakethings.com/a-native-javascript-equivalent-of-jquerys-ready-method/
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param {Function} fn Callback function to run.
  */
@@ -713,7 +713,7 @@ function libraryToggleAttribute( element, attribute, trueVal, falseVal ) {
 /**
  * Toggle a menu item on or off.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param {HTMLElement} target
  * @param {number} duration
@@ -816,7 +816,7 @@ function libraryMenuToggle( target, duration ) {
 /**
  * Traverses the DOM up to find elements matching the query.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param {HTMLElement} target
  * @param {string} query

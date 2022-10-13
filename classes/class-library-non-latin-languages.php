@@ -4,16 +4,16 @@
  *
  * Handle non-latin language styles.
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Library 1.0
+ * @package My_Library
+ * @subpackage My_Library
+ * @since My_Library 1.0
  */
 
 if ( ! class_exists( 'library_Non_Latin_Languages' ) ) {
 	/**
 	 * Language handling.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 */
 	class library_Non_Latin_Languages {
 
@@ -22,7 +22,7 @@ if ( ! class_exists( 'library_Non_Latin_Languages' ) ) {
 		 *
 		 * Return CSS for non-latin language, if available, or null
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @param string $type Whether to return CSS for the "front-end", "block-editor", or "classic-editor".
 		 * @return void
@@ -35,7 +35,7 @@ if ( ! class_exists( 'library_Non_Latin_Languages' ) ) {
 			/**
 			 * Filters the fallback fonts for non-latin languages.
 			 *
-			 * @since Library 1.0
+			 * @since My_Library 1.0
 			 *
 			 * @param array $font_family An array of locales and font families.
 			 */
@@ -111,7 +111,7 @@ if ( ! class_exists( 'library_Non_Latin_Languages' ) ) {
 			/**
 			 * Filters the elements to apply fallback fonts to.
 			 *
-			 * @since Library 1.0
+			 * @since My_Library 1.0
 			 *
 			 * @param array $elements An array of elements for "front-end", "block-editor", or "classic-editor".
 			 */

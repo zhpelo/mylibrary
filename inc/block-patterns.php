@@ -5,8 +5,8 @@
  * @link https://developer.wordpress.org/reference/functions/register_block_pattern/
  * @link https://developer.wordpress.org/reference/functions/register_block_pattern_category/
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
+ * @package My_Library
+ * @subpackage My_Library
  * @since Library 1.6
  */
 

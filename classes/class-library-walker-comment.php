@@ -2,9 +2,9 @@
 /**
  * Custom comment walker for this theme.
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Library 1.0
+ * @package My_Library
+ * @subpackage My_Library
+ * @since My_Library 1.0
  */
 
 if ( ! class_exists( 'library_Walker_Comment' ) ) {
@@ -12,14 +12,14 @@ if ( ! class_exists( 'library_Walker_Comment' ) ) {
 	 * CUSTOM COMMENT WALKER
 	 * A custom walker for comments, based on the walker in Twenty Nineteen.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 */
 	class library_Walker_Comment extends Walker_Comment {
 
 		/**
 		 * Outputs a comment in the HTML5 format.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @see wp_list_comments()
 		 * @see https://developer.wordpress.org/reference/functions/get_comment_author_url/

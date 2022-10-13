@@ -2,9 +2,9 @@
 /**
  * Library SVG Icon helper functions
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Library 1.0
+ * @package My_Library
+ * @subpackage My_Library
+ * @since My_Library 1.0
  */
 
 if ( ! function_exists( 'library_the_theme_svg' ) ) {
@@ -12,7 +12,7 @@ if ( ! function_exists( 'library_the_theme_svg' ) ) {
 	 * Output and Get Theme SVG.
 	 * Output and get the SVG markup for an icon in the library_SVG_Icons class.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param string $svg_name The name of the icon.
 	 * @param string $group    The group the icon belongs to.
@@ -28,7 +28,7 @@ if ( ! function_exists( 'library_get_theme_svg' ) ) {
 	/**
 	 * Get information about the SVG icon.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param string $svg_name The name of the icon.
 	 * @param string $group    The group the icon belongs to.

@@ -3,9 +3,9 @@
  * Displays the menus and widgets at the end of the main element.
  * Visually, this output is presented as part of the footer element.
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Library 1.0
+ * @package My_Library
+ * @subpackage My_Library
+ * @since My_Library 1.0
  */
 
 $has_footer_menu = has_nav_menu( 'footer' );

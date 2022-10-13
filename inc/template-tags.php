@@ -2,9 +2,9 @@
 /**
  * Custom template tags for this theme.
  *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Library 1.0
+ * @package My_Library
+ * @subpackage My_Library
+ * @since My_Library 1.0
  */
 
 /**
@@ -25,7 +25,7 @@
 /**
  * Displays the site logo, either text or image.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param array $args    Arguments for displaying the site logo either as an image or text.
  * @param bool  $display Display or return the HTML.
@@ -52,7 +52,7 @@ function library_site_logo( $args = array(), $display = true ) {
 	/**
 	 * Filters the arguments for `library_site_logo()`.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param array $args     Parsed arguments.
 	 * @param array $defaults Function's default arguments.
@@ -74,7 +74,7 @@ function library_site_logo( $args = array(), $display = true ) {
 	/**
 	 * Filters the arguments for `library_site_logo()`.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param string $html      Compiled HTML based on our arguments.
 	 * @param array  $args      Parsed arguments.
@@ -94,7 +94,7 @@ function library_site_logo( $args = array(), $display = true ) {
 /**
  * Displays the site description.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param bool $display Display or return the HTML.
  * @return string The HTML to display.
@@ -113,7 +113,7 @@ function library_site_description( $display = true ) {
 	/**
 	 * Filters the HTML for the site description.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param string $html        The HTML to display.
 	 * @param string $description Site description via `bloginfo()`.
@@ -135,7 +135,7 @@ function library_site_description( $display = true ) {
 /**
  * Checks if the specified comment is written by the author of the post commented on.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param object $comment Comment data.
  * @return bool
@@ -163,7 +163,7 @@ function library_is_comment_by_post_author( $comment = null ) {
  * Filter the comment reply link to add a class indicating it should not use JS slow-scroll, as it
  * makes it scroll to the wrong position on the page.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param string $link Link to the top of the page.
  * @return string Link to the top of the page.
@@ -186,7 +186,7 @@ add_filter( 'comment_reply_link', 'library_filter_comment_reply_link' );
  *
  * If it's a single post, outputs the post meta values specified in the Customizer settings.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param int    $post_id  The ID of the post for which the post meta should be output.
  * @param string $location Which post meta location to output – single or preview.
@@ -200,7 +200,7 @@ function library_the_post_meta( $post_id = null, $location = 'single-top' ) {
 /**
  * Filters the edit post link to add an icon and use the post meta structure.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param string $link    Anchor tag for the edit link.
  * @param int    $post_id Post ID.
@@ -239,7 +239,7 @@ add_filter( 'edit_post_link', 'library_edit_post_link', 10, 3 );
 /**
  * Retrieves the post meta.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param int    $post_id  The ID of the post.
  * @param string $location The location where the meta is shown.
@@ -257,7 +257,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 	 * This filter can be used to hide post meta information of post, page or custom post type
 	 * registered by child themes or plugins.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param array Array of post types.
 	 */
@@ -278,7 +278,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 		 *
 		 * Use this filter to hide post meta information like Author, Post date, Comments, Is sticky status.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @param array $args {
 		 *     @type string $author
@@ -306,7 +306,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 		 *
 		 * Use this filter to hide post tags.
 		 *
-		 * @since Library 1.0
+		 * @since My_Library 1.0
 		 *
 		 * @param array $args {
 		 *     @type string $tags
@@ -348,7 +348,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 				 *
 				 * Allow output of additional post meta info to be added by child themes and plugins.
 				 *
-				 * @since Library 1.0
+				 * @since My_Library 1.0
 				 * @since Library 1.1 Added the `$post_meta` and `$location` parameters.
 				 *
 				 * @param int    $post_id   Post ID.
@@ -475,7 +475,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 				 *
 				 * Allow output of additional post meta info to be added by child themes and plugins.
 				 *
-				 * @since Library 1.0
+				 * @since My_Library 1.0
 				 * @since Library 1.1 Added the `$post_meta` and `$location` parameters.
 				 *
 				 * @param int    $post_id   Post ID.
@@ -517,7 +517,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
  * Filter the class applied to wp_list_pages() items with children to match the menu class, to simplify.
  * styling of sub levels in the fallback. Only applied if the match_menu_classes argument is set.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param string[] $css_class    An array of CSS classes to be applied to each list item.
  * @param WP_Post  $page         Page data object.
@@ -554,7 +554,7 @@ add_filter( 'page_css_class', 'library_filter_wp_list_pages_item_classes', 10, 5
 /**
  * Adds a Sub Nav Toggle to the Expanded Menu and Mobile Menu.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param stdClass $args  An object of wp_nav_menu() arguments.
  * @param WP_Post  $item  Menu item data object.
@@ -602,7 +602,7 @@ add_filter( 'nav_menu_item_args', 'library_add_sub_toggles_to_main_menu', 10, 3 
 /**
  * Displays SVG icons in social links menu.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param string   $item_output The menu item's starting HTML output.
  * @param WP_Post  $item        Menu item data object.
@@ -634,7 +634,7 @@ add_filter( 'walker_nav_menu_start_el', 'library_nav_menu_social_icons', 10, 4 )
  *
  * If we're missing JavaScript support, the HTML element will have a 'no-js' class.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  */
 function library_no_js_class() {
 
@@ -649,7 +649,7 @@ add_action( 'wp_head', 'library_no_js_class' );
 /**
  * Adds conditional body classes.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param array $classes Classes added to the body tag.
  * @return array Classes added to the body tag.
@@ -752,7 +752,7 @@ add_filter( 'body_class', 'library_body_classes' );
 /**
  * Filters the archive title and styles the word before the first colon.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @param string $title Current archive title.
  * @return string Current archive title.
@@ -762,7 +762,7 @@ function library_get_the_archive_title( $title ) {
 	/**
 	 * Filters the regular expression used to style the word before the first colon.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param array $regex An array of regular expression pattern and replacement.
 	 */
@@ -793,7 +793,7 @@ add_filter( 'get_the_archive_title', 'library_get_the_archive_title' );
 /**
  * Toggles animation duration in milliseconds.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @return int Duration in milliseconds
  */
@@ -801,7 +801,7 @@ function library_toggle_duration() {
 	/**
 	 * Filters the animation duration/speed used usually for submenu toggles.
 	 *
-	 * @since Library 1.0
+	 * @since My_Library 1.0
 	 *
 	 * @param int $duration Duration in milliseconds.
 	 */
@@ -818,7 +818,7 @@ function library_toggle_duration() {
  * with the optional prefix. As such the returned value is not universally unique,
  * but it is unique across the life of the PHP process.
  *
- * @since Library 1.0
+ * @since My_Library 1.0
  *
  * @see wp_unique_id() Themes requiring WordPress 5.0.3 and greater should use this instead.
  *
