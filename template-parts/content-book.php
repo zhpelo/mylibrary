@@ -25,11 +25,11 @@
 			if ( is_search() || ! is_singular() && 'summary' === get_theme_mod( 'blog_content', 'full' ) ) {
 				the_excerpt();
 			} else {
-				the_content( __( 'Continue reading', 'library' ) );
+				the_content( __( 'Continue reading', 'mylibrary' ) );
 
 				$chapters = ebooks_get_chapters(get_the_ID());
 				if($chapters){
-					echo "<h2>".__( 'Chapter list', 'library' )."</h2>";
+					echo "<h2>".__( 'Chapter list', 'mylibrary' )."</h2>";
 					echo "<ol>";
 					foreach ($chapters as $chapter) {
 						echo "<li><a href=\"".get_chapter_url($chapter->chapter_id)."\">{$chapter->chapter_title}</a></li>";
@@ -48,7 +48,7 @@
 		<?php
 		wp_link_pages(
 			array(
-				'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'library' ) . '"><span class="label">' . __( 'Pages:', 'library' ) . '</span>',
+				'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'mylibrary' ) . '"><span class="label">' . __( 'Pages:', 'mylibrary' ) . '</span>',
 				'after'       => '</nav>',
 				'link_before' => '<span class="page-number">',
 				'link_after'  => '</span>',

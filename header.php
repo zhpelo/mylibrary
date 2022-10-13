@@ -50,7 +50,7 @@
 								<span class="toggle-icon">
 									<?php library_the_theme_svg( 'search' ); ?>
 								</span>
-								<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'library' ); ?></span>
+								<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'mylibrary' ); ?></span>
 							</span>
 						</button><!-- .search-toggle -->
 
@@ -73,7 +73,7 @@
 							<span class="toggle-icon">
 								<?php library_the_theme_svg( 'ellipsis' ); ?>
 							</span>
-							<span class="toggle-text"><?php _e( 'Menu', 'library' ); ?></span>
+							<span class="toggle-text"><?php _e( 'Menu', 'mylibrary' ); ?></span>
 						</span>
 					</button><!-- .nav-toggle -->
 
@@ -85,7 +85,7 @@
 					if ( has_nav_menu( 'primary' ) || ! has_nav_menu( 'expanded' ) ) {
 						?>
 
-							<nav class="primary-menu-wrapper" aria-label="<?php echo esc_attr_x( 'Horizontal', 'menu', 'library' ); ?>">
+							<nav class="primary-menu-wrapper" aria-label="<?php echo esc_attr_x( 'Horizontal', 'menu', 'mylibrary' ); ?>">
 
 								<ul class="primary-menu reset-list-style">
 
@@ -134,7 +134,7 @@
 
 								<button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 									<span class="toggle-inner">
-										<span class="toggle-text"><?php _e( 'Menu', 'library' ); ?></span>
+										<span class="toggle-text"><?php _e( 'Menu', 'mylibrary' ); ?></span>
 										<span class="toggle-icon">
 											<?php library_the_theme_svg( 'ellipsis' ); ?>
 										</span>
@@ -154,7 +154,7 @@
 								<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
 									<span class="toggle-inner">
 										<?php library_the_theme_svg( 'search' ); ?>
-										<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'library' ); ?></span>
+										<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'mylibrary' ); ?></span>
 									</span>
 								</button><!-- .search-toggle -->
 

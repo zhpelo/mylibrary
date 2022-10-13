@@ -29,7 +29,7 @@ get_header();
 
 		$archive_title = sprintf(
 			'%1$s %2$s',
-			'<span class="color-accent">' . __( 'Search:', 'library' ) . '</span>',
+			'<span class="color-accent">' . __( 'Search:', 'mylibrary' ) . '</span>',
 			'&ldquo;' . get_search_query() . '&rdquo;'
 		);
 
@@ -40,15 +40,15 @@ get_header();
 					'We found %s result for your search.',
 					'We found %s results for your search.',
 					$wp_query->found_posts,
-					'library'
+					'mylibrary'
 				),
 				number_format_i18n( $wp_query->found_posts )
 			);
 		} else {
-			$archive_subtitle = __( 'We could not find any results for your search. You can give it another try through the search form below.', 'library' );
+			$archive_subtitle = __( 'We could not find any results for your search. You can give it another try through the search form below.', 'mylibrary' );
 		}
 	} elseif ( is_archive() && ! have_posts() ) {
-		$archive_title = __( 'Nothing Found', 'library' );
+		$archive_title = __( 'Nothing Found', 'mylibrary' );
 	} elseif ( ! is_home() ) {
 		$archive_title    = get_the_archive_title();
 		$archive_subtitle = get_the_archive_description();
@@ -98,7 +98,7 @@ get_header();
 			<?php
 			get_search_form(
 				array(
-					'aria_label' => __( 'search again', 'library' ),
+					'aria_label' => __( 'search again', 'mylibrary' ),
 				)
 			);
 			?>

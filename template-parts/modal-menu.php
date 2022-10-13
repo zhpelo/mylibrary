@@ -18,7 +18,7 @@
 			<div class="menu-top">
 
 				<button class="toggle close-nav-toggle fill-children-current-color" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" data-set-focus=".menu-modal">
-					<span class="toggle-text"><?php _e( 'Close Menu', 'library' ); ?></span>
+					<span class="toggle-text"><?php _e( 'Close Menu', 'mylibrary' ); ?></span>
 					<?php library_the_theme_svg( 'cross' ); ?>
 				</button><!-- .nav-toggle -->
 
@@ -45,7 +45,7 @@
 
 					?>
 
-					<nav class="expanded-menu<?php echo esc_attr( $expanded_nav_classes ); ?>" aria-label="<?php echo esc_attr_x( 'Expanded', 'menu', 'library' ); ?>">
+					<nav class="expanded-menu<?php echo esc_attr( $expanded_nav_classes ); ?>" aria-label="<?php echo esc_attr_x( 'Expanded', 'menu', 'mylibrary' ); ?>">
 
 						<ul class="modal-menu reset-list-style">
 							<?php
@@ -70,7 +70,7 @@
 				if ( 'expanded' !== $mobile_menu_location ) {
 					?>
 
-					<nav class="mobile-menu" aria-label="<?php echo esc_attr_x( 'Mobile', 'menu', 'library' ); ?>">
+					<nav class="mobile-menu" aria-label="<?php echo esc_attr_x( 'Mobile', 'menu', 'mylibrary' ); ?>">
 
 						<ul class="modal-menu reset-list-style">
 
@@ -114,7 +114,7 @@
 
 				<?php if ( has_nav_menu( 'social' ) ) { ?>
 
-					<nav aria-label="<?php esc_attr_e( 'Expanded Social links', 'library' ); ?>">
+					<nav aria-label="<?php esc_attr_e( 'Expanded Social links', 'mylibrary' ); ?>">
 						<ul class="social-menu reset-list-style social-icons fill-children-current-color">
 
 							<?php

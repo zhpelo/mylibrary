@@ -31,10 +31,10 @@ if ( $comments ) {
 			<h2 class="comment-reply-title">
 			<?php
 			if ( ! have_comments() ) {
-				_e( 'Leave a comment', 'library' );
+				_e( 'Leave a comment', 'mylibrary' );
 			} elseif ( 1 === $comments_number ) {
 				/* translators: %s: Post title. */
-				printf( _x( 'One reply on &ldquo;%s&rdquo;', 'comments title', 'library' ), get_the_title() );
+				printf( _x( 'One reply on &ldquo;%s&rdquo;', 'comments title', 'mylibrary' ), get_the_title() );
 			} else {
 				printf(
 					/* translators: 1: Number of comments, 2: Post title. */
@@ -43,7 +43,7 @@ if ( $comments ) {
 						'%1$s replies on &ldquo;%2$s&rdquo;',
 						$comments_number,
 						'comments title',
-						'library'
+						'mylibrary'
 					),
 					number_format_i18n( $comments_number ),
 					get_the_title()
@@ -71,8 +71,8 @@ if ( $comments ) {
 					'echo'      => false,
 					'end_size'  => 0,
 					'mid_size'  => 0,
-					'next_text' => __( 'Newer Comments', 'library' ) . ' <span aria-hidden="true">&rarr;</span>',
-					'prev_text' => '<span aria-hidden="true">&larr;</span> ' . __( 'Older Comments', 'library' ),
+					'next_text' => __( 'Newer Comments', 'mylibrary' ) . ' <span aria-hidden="true">&rarr;</span>',
+					'prev_text' => '<span aria-hidden="true">&larr;</span> ' . __( 'Older Comments', 'mylibrary' ),
 				)
 			);
 
@@ -85,7 +85,7 @@ if ( $comments ) {
 				}
 				?>
 
-				<nav class="comments-pagination pagination<?php echo $pagination_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>" aria-label="<?php esc_attr_e( 'Comments', 'library' ); ?>">
+				<nav class="comments-pagination pagination<?php echo $pagination_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>" aria-label="<?php esc_attr_e( 'Comments', 'mylibrary' ); ?>">
 					<?php echo wp_kses_post( $comment_pagination ); ?>
 				</nav>
 
@@ -124,7 +124,7 @@ if ( comments_open() || pings_open() ) {
 
 	<div class="comment-respond" id="respond">
 
-		<p class="comments-closed"><?php _e( 'Comments are closed.', 'library' ); ?></p>
+		<p class="comments-closed"><?php _e( 'Comments are closed.', 'mylibrary' ); ?></p>
 
 	</div><!-- #respond -->
 

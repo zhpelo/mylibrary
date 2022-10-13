@@ -33,7 +33,7 @@
 			if ( is_search() || ! is_singular() && 'summary' === get_theme_mod( 'blog_content', 'full' ) ) {
 				the_excerpt();
 			} else {
-				the_content( __( 'Continue reading', 'library' ) );
+				the_content( __( 'Continue reading', 'mylibrary' ) );
 			}
 			?>
 
@@ -45,7 +45,7 @@
 		<?php
 		wp_link_pages(
 			array(
-				'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'library' ) . '"><span class="label">' . __( 'Pages:', 'library' ) . '</span>',
+				'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'mylibrary' ) . '"><span class="label">' . __( 'Pages:', 'mylibrary' ) . '</span>',
 				'after'       => '</nav>',
 				'link_before' => '<span class="page-number">',
 				'link_after'  => '</span>',

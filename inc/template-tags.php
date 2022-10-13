@@ -220,7 +220,7 @@ function library_edit_post_link( $link, $post_id, $text ) {
 	$text = sprintf(
 		wp_kses(
 			/* translators: %s: Post title. Only visible to screen readers. */
-			__( 'Edit <span class="screen-reader-text">%s</span>', 'library' ),
+			__( 'Edit <span class="screen-reader-text">%s</span>', 'mylibrary' ),
 			array(
 				'span' => array(
 					'class' => array(),
@@ -365,14 +365,14 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					?>
 					<li class="post-author meta-wrapper">
 						<span class="meta-icon">
-							<span class="screen-reader-text"><?php _e( 'Post author', 'library' ); ?></span>
+							<span class="screen-reader-text"><?php _e( 'Post author', 'mylibrary' ); ?></span>
 							<?php library_the_theme_svg( 'user' ); ?>
 						</span>
 						<span class="meta-text">
 							<?php
 							printf(
 								/* translators: %s: Author name. */
-								__( 'By %s', 'library' ),
+								__( 'By %s', 'mylibrary' ),
 								'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author_meta( 'display_name' ) ) . '</a>'
 							);
 							?>
@@ -389,7 +389,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					?>
 					<li class="post-date meta-wrapper">
 						<span class="meta-icon">
-							<span class="screen-reader-text"><?php _e( 'Post date', 'library' ); ?></span>
+							<span class="screen-reader-text"><?php _e( 'Post date', 'mylibrary' ); ?></span>
 							<?php library_the_theme_svg( 'calendar' ); ?>
 						</span>
 						<span class="meta-text">
@@ -407,11 +407,11 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					?>
 					<li class="post-categories meta-wrapper">
 						<span class="meta-icon">
-							<span class="screen-reader-text"><?php _e( 'Categories', 'library' ); ?></span>
+							<span class="screen-reader-text"><?php _e( 'Categories', 'mylibrary' ); ?></span>
 							<?php library_the_theme_svg( 'folder' ); ?>
 						</span>
 						<span class="meta-text">
-							<?php _ex( 'In', 'A string that is output before one or more categories', 'library' ); ?> <?php the_category( ', ' ); ?>
+							<?php _ex( 'In', 'A string that is output before one or more categories', 'mylibrary' ); ?> <?php the_category( ', ' ); ?>
 						</span>
 					</li>
 					<?php
@@ -425,7 +425,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					?>
 					<li class="post-tags meta-wrapper">
 						<span class="meta-icon">
-							<span class="screen-reader-text"><?php _e( 'Tags', 'library' ); ?></span>
+							<span class="screen-reader-text"><?php _e( 'Tags', 'mylibrary' ); ?></span>
 							<?php library_the_theme_svg( 'tag' ); ?>
 						</span>
 						<span class="meta-text">
@@ -463,7 +463,7 @@ function library_get_post_meta( $post_id = null, $location = 'single-top' ) {
 							<?php library_the_theme_svg( 'bookmark' ); ?>
 						</span>
 						<span class="meta-text">
-							<?php _e( 'Sticky post', 'library' ); ?>
+							<?php _e( 'Sticky post', 'mylibrary' ); ?>
 						</span>
 					</li>
 					<?php
@@ -577,7 +577,7 @@ function library_add_sub_toggles_to_main_menu( $args, $item, $depth ) {
 			$toggle_duration      = library_toggle_duration();
 
 			// Add the sub menu toggle.
-			$args->after .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'library' ) . '</span>' . library_get_theme_svg( 'chevron-down' ) . '</button>';
+			$args->after .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'mylibrary' ) . '</span>' . library_get_theme_svg( 'chevron-down' ) . '</button>';
 
 		}
 
@@ -727,7 +727,7 @@ function library_body_classes( $classes ) {
 	}
 
 	// Get header/footer background color.
-	$header_footer_background = get_theme_mod( 'header_footer_background_color', '#ffffff' );
+	$header_footer_background = get_theme_mod( 'header_footer_background_color', '#5d6146' );
 	$header_footer_background = strtolower( '#' . ltrim( $header_footer_background, '#' ) );
 
 	// Get content background color.

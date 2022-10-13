@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="submit">
-                        <input type="submit" name="save" id="publish" class="button button-primary button-large" value="<?php _e("Save chapter", "library") ?>">
+                        <input type="submit" name="save" id="publish" class="button button-primary button-large" value="<?php _e("Save chapter", "mylibrary") ?>">
                     </div>
                 </div>
 
@@ -45,7 +45,7 @@
                         </tbody>
                     </table>
                     <div class="submit">
-                        <a class="button button-primary button-large" href="edit.php?post_type=book&page=manage-chapters&post_id=<?php echo $post_id;?>" ><?php _e("add new chapter", "library") ?></a>
+                        <a class="button button-primary button-large" href="edit.php?post_type=book&page=manage-chapters&post_id=<?php echo $post_id;?>" ><?php _e("add new chapter", "mylibrary") ?></a>
                     </div>
                 </div>
             </div>

@@ -36,7 +36,7 @@ function library_get_starter_content() {
 		// Create the custom image attachments used as post thumbnails for pages.
 		'attachments' => array(
 			'image-opening' => array(
-				'post_title' => _x( 'The New UMoMA Opens its Doors', 'Theme starter content', 'library' ),
+				'post_title' => _x( 'The New UMoMA Opens its Doors', 'Theme starter content', 'mylibrary' ),
 				'file'       => 'assets/images/2020-landscape-1.png', // URL relative to the template directory.
 			),
 		),
@@ -45,7 +45,7 @@ function library_get_starter_content() {
 		'posts'       => array(
 			'front' => array(
 				'post_type'    => 'page',
-				'post_title'   => __( 'The New UMoMA Opens its Doors', 'library' ),
+				'post_title'   => __( 'The New UMoMA Opens its Doors', 'mylibrary' ),
 				// Use the above featured image with the predefined about page.
 				'thumbnail'    => '{{image-opening}}',
 				'post_content' => implode(
@@ -53,7 +53,7 @@ function library_get_starter_content() {
 					array(
 						'<!-- wp:group {"align":"wide"} -->',
 						'<div class="wp-block-group alignwide"><div class="wp-block-group__inner-container"><!-- wp:heading {"align":"center"} -->',
-						'<h2 class="has-text-align-center">' . __( 'The premier destination for modern art in Northern Sweden. Open from 10 AM to 6 PM every day during the summer months.', 'library' ) . '</h2>',
+						'<h2 class="has-text-align-center">' . __( 'The premier destination for modern art in Northern Sweden. Open from 10 AM to 6 PM every day during the summer months.', 'mylibrary' ) . '</h2>',
 						'<!-- /wp:heading --></div></div>',
 						'<!-- /wp:group -->',
 						'<!-- wp:columns {"align":"wide"} -->',
@@ -64,13 +64,13 @@ function library_get_starter_content() {
 						'<figure class="wp-block-image alignfull size-full"><img src="' . get_theme_file_uri() . '/assets/images/2020-three-quarters-1.png" alt="" class="wp-image-37"/></figure>',
 						'<!-- /wp:image -->',
 						'<!-- wp:heading {"level":3} -->',
-						'<h3>' . __( 'Works and Days', 'library' ) . '</h3>',
+						'<h3>' . __( 'Works and Days', 'mylibrary' ) . '</h3>',
 						'<!-- /wp:heading -->',
 						'<!-- wp:paragraph -->',
-						'<p>' . __( 'August 1 -- December 1', 'library' ) . '</p>',
+						'<p>' . __( 'August 1 -- December 1', 'mylibrary' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:button {"className":"is-style-outline"} -->',
-						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'library' ) . '</a></div>',
+						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'mylibrary' ) . '</a></div>',
 						'<!-- /wp:button --></div></div>',
 						'<!-- /wp:group -->',
 						'<!-- wp:group -->',
@@ -79,13 +79,13 @@ function library_get_starter_content() {
 						'<figure class="wp-block-image alignfull size-full"><img src="' . get_theme_file_uri() . '/assets/images/2020-three-quarters-3.png" alt="" class="wp-image-37"/></figure>',
 						'<!-- /wp:image -->',
 						'<!-- wp:heading {"level":3} -->',
-						'<h3>' . __( 'Theatre of Operations', 'library' ) . '</h3>',
+						'<h3>' . __( 'Theatre of Operations', 'mylibrary' ) . '</h3>',
 						'<!-- /wp:heading -->',
 						'<!-- wp:paragraph -->',
-						'<p>' . __( 'October 1 -- December 1', 'library' ) . '</p>',
+						'<p>' . __( 'October 1 -- December 1', 'mylibrary' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:button {"className":"is-style-outline"} -->',
-						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'library' ) . '</a></div>',
+						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'mylibrary' ) . '</a></div>',
 						'<!-- /wp:button --></div></div>',
 						'<!-- /wp:group --></div>',
 						'<!-- /wp:column -->',
@@ -96,13 +96,13 @@ function library_get_starter_content() {
 						'<figure class="wp-block-image alignfull size-full"><img src="' . get_theme_file_uri() . '/assets/images/2020-three-quarters-2.png" alt="" class="wp-image-37"/></figure>',
 						'<!-- /wp:image -->',
 						'<!-- wp:heading {"level":3} -->',
-						'<h3>' . __( 'The Life I Deserve', 'library' ) . '</h3>',
+						'<h3>' . __( 'The Life I Deserve', 'mylibrary' ) . '</h3>',
 						'<!-- /wp:heading -->',
 						'<!-- wp:paragraph -->',
-						'<p>' . __( 'August 1 -- December 1', 'library' ) . '</p>',
+						'<p>' . __( 'August 1 -- December 1', 'mylibrary' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:button {"className":"is-style-outline"} -->',
-						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'library' ) . '</a></div>',
+						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'mylibrary' ) . '</a></div>',
 						'<!-- /wp:button --></div></div>',
 						'<!-- /wp:group -->',
 						'<!-- wp:group -->',
@@ -111,13 +111,13 @@ function library_get_starter_content() {
 						'<figure class="wp-block-image alignfull size-full"><img src="' . get_theme_file_uri() . '/assets/images/2020-three-quarters-4.png" alt="" class="wp-image-37"/></figure>',
 						'<!-- /wp:image -->',
 						'<!-- wp:heading {"level":3} -->',
-						'<h3>' . __( 'From Signac to Matisse', 'library' ) . '</h3>',
+						'<h3>' . __( 'From Signac to Matisse', 'mylibrary' ) . '</h3>',
 						'<!-- /wp:heading -->',
 						'<!-- wp:paragraph -->',
-						'<p>' . __( 'October 1 -- December 1', 'library' ) . '</p>',
+						'<p>' . __( 'October 1 -- December 1', 'mylibrary' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:button {"className":"is-style-outline"} -->',
-						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'library' ) . '</a></div>',
+						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'mylibrary' ) . '</a></div>',
 						'<!-- /wp:button --></div></div>',
 						'<!-- /wp:group --></div>',
 						'<!-- /wp:column --></div>',
@@ -127,14 +127,14 @@ function library_get_starter_content() {
 						'<!-- /wp:image -->',
 						'<!-- wp:group {"align":"wide"} -->',
 						'<div class="wp-block-group alignwide"><div class="wp-block-group__inner-container"><!-- wp:heading {"align":"center","textColor":"accent"} -->',
-						'<h2 class="has-accent-color has-text-align-center">' . __( '&#8220;Cyborgs, as the philosopher Donna Haraway established, are not reverent. They do not remember the cosmos.&#8221;', 'library' ) . '</h2>',
+						'<h2 class="has-accent-color has-text-align-center">' . __( '&#8220;Cyborgs, as the philosopher Donna Haraway established, are not reverent. They do not remember the cosmos.&#8221;', 'mylibrary' ) . '</h2>',
 						'<!-- /wp:heading --></div></div>',
 						'<!-- /wp:group -->',
 						'<!-- wp:paragraph {"dropCap":true} -->',
-						'<p class="has-drop-cap">' . __( 'With seven floors of striking architecture, UMoMA shows exhibitions of international contemporary art, sometimes along with art historical retrospectives. Existential, political and philosophical issues are intrinsic to our programme. As visitor you are invited to guided tours artist talks, lectures, film screenings and other events with free admission', 'library' ) . '</p>',
+						'<p class="has-drop-cap">' . __( 'With seven floors of striking architecture, UMoMA shows exhibitions of international contemporary art, sometimes along with art historical retrospectives. Existential, political and philosophical issues are intrinsic to our programme. As visitor you are invited to guided tours artist talks, lectures, film screenings and other events with free admission', 'mylibrary' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:paragraph -->',
-						'<p>' . __( 'The exhibitions are produced by UMoMA in collaboration with artists and museums around the world and they often attract international attention. UMoMA has received a Special Commendation from the European Museum of the Year, and was among the top candidates for the Swedish Museum of the Year Award as well as for the Council of Europe Museum Prize.', 'library' ) . '</p>',
+						'<p>' . __( 'The exhibitions are produced by UMoMA in collaboration with artists and museums around the world and they often attract international attention. UMoMA has received a Special Commendation from the European Museum of the Year, and was among the top candidates for the Swedish Museum of the Year Award as well as for the Council of Europe Museum Prize.', 'mylibrary' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:paragraph -->',
 						'<p></p>',
@@ -142,13 +142,13 @@ function library_get_starter_content() {
 						'<!-- wp:group {"customBackgroundColor":"#ffffff","align":"wide"} -->',
 						'<div class="wp-block-group alignwide has-background" style="background-color:#ffffff"><div class="wp-block-group__inner-container"><!-- wp:group -->',
 						'<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:heading {"align":"center"} -->',
-						'<h2 class="has-text-align-center">' . __( 'Become a Member and Get Exclusive Offers!', 'library' ) . '</h2>',
+						'<h2 class="has-text-align-center">' . __( 'Become a Member and Get Exclusive Offers!', 'mylibrary' ) . '</h2>',
 						'<!-- /wp:heading -->',
 						'<!-- wp:paragraph {"align":"center"} -->',
-						'<p class="has-text-align-center">' . __( 'Members get access to exclusive exhibits and sales. Our memberships cost $99.99 and are billed annually.', 'library' ) . '</p>',
+						'<p class="has-text-align-center">' . __( 'Members get access to exclusive exhibits and sales. Our memberships cost $99.99 and are billed annually.', 'mylibrary' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:button {"align":"center"} -->',
-						'<div class="wp-block-button aligncenter"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Join the Club', 'library' ) . '</a></div>',
+						'<div class="wp-block-button aligncenter"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Join the Club', 'mylibrary' ) . '</a></div>',
 						'<!-- /wp:button --></div></div>',
 						'<!-- /wp:group --></div></div>',
 						'<!-- /wp:group -->',
@@ -174,7 +174,7 @@ function library_get_starter_content() {
 		'nav_menus'   => array(
 			// Assign a menu to the "primary" location.
 			'primary'  => array(
-				'name'  => __( 'Primary', 'library' ),
+				'name'  => __( 'Primary', 'mylibrary' ),
 				'items' => array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',
@@ -184,7 +184,7 @@ function library_get_starter_content() {
 			),
 			// This replicates primary just to demonstrate the expanded menu.
 			'expanded' => array(
-				'name'  => __( 'Primary', 'library' ),
+				'name'  => __( 'Primary', 'mylibrary' ),
 				'items' => array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',
@@ -194,7 +194,7 @@ function library_get_starter_content() {
 			),
 			// Assign a menu to the "social" location.
 			'social'   => array(
-				'name'  => __( 'Social Links Menu', 'library' ),
+				'name'  => __( 'Social Links Menu', 'mylibrary' ),
 				'items' => array(
 					'link_yelp',
 					'link_facebook',

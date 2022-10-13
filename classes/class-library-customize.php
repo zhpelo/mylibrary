@@ -83,8 +83,8 @@ if ( ! class_exists( 'library_Customize' ) ) {
 					'type'        => 'checkbox',
 					'section'     => 'title_tagline',
 					'priority'    => 10,
-					'label'       => __( 'Retina logo', 'library' ),
-					'description' => __( 'Scales the logo to half its uploaded size, making it sharp on high-res screens.', 'library' ),
+					'label'       => __( 'Retina logo', 'mylibrary' ),
+					'description' => __( 'Scales the logo to half its uploaded size, making it sharp on high-res screens.', 'mylibrary' ),
 				)
 			);
 
@@ -104,7 +104,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 					$wp_customize,
 					'header_footer_background_color',
 					array(
-						'label'   => __( 'Header &amp; Footer Background Color', 'library' ),
+						'label'   => __( 'Header &amp; Footer Background Color', 'mylibrary' ),
 						'section' => 'colors',
 					)
 				)
@@ -126,10 +126,10 @@ if ( ! class_exists( 'library_Customize' ) ) {
 				array(
 					'type'    => 'radio',
 					'section' => 'colors',
-					'label'   => __( 'Primary Color', 'library' ),
+					'label'   => __( 'Primary Color', 'mylibrary' ),
 					'choices' => array(
-						'default' => _x( 'Default', 'color', 'library' ),
-						'custom'  => _x( 'Custom', 'color', 'library' ),
+						'default' => _x( 'Default', 'color', 'mylibrary' ),
+						'custom'  => _x( 'Custom', 'color', 'mylibrary' ),
 					),
 				)
 			);
@@ -187,7 +187,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 					array(
 						'section'         => 'colors',
 						'settings'        => 'accent_hue',
-						'description'     => __( 'Apply a custom color for links, buttons, featured images.', 'library' ),
+						'description'     => __( 'Apply a custom color for links, buttons, featured images.', 'mylibrary' ),
 						'mode'            => 'hue',
 						'active_callback' => static function() use ( $wp_customize ) {
 							return ( 'custom' === $wp_customize->get_setting( 'accent_hue_active' )->value() );
@@ -207,7 +207,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 			$wp_customize->add_section(
 				'options',
 				array(
-					'title'      => __( 'Theme Options', 'library' ),
+					'title'      => __( 'Theme Options', 'mylibrary' ),
 					'priority'   => 40,
 					'capability' => 'edit_theme_options',
 				)
@@ -230,7 +230,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 					'type'     => 'checkbox',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'Show search in header', 'library' ),
+					'label'    => __( 'Show search in header', 'mylibrary' ),
 				)
 			);
 
@@ -251,7 +251,7 @@ if ( ! class_exists( 'library_Customize' ) ) {
 					'type'     => 'checkbox',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'Show author bio', 'library' ),
+					'label'    => __( 'Show author bio', 'mylibrary' ),
 				)
 			);
 
@@ -272,10 +272,10 @@ if ( ! class_exists( 'library_Customize' ) ) {
 					'type'     => 'radio',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'On archive pages, posts show:', 'library' ),
+					'label'    => __( 'On archive pages, posts show:', 'mylibrary' ),
 					'choices'  => array(
-						'full'    => __( 'Full text', 'library' ),
-						'summary' => __( 'Summary', 'library' ),
+						'full'    => __( 'Full text', 'mylibrary' ),
+						'summary' => __( 'Summary', 'mylibrary' ),
 					),
 				)
 			);
@@ -286,9 +286,9 @@ if ( ! class_exists( 'library_Customize' ) ) {
 			$wp_customize->add_section(
 				'cover_template_options',
 				array(
-					'title'       => __( 'Cover Template', 'library' ),
+					'title'       => __( 'Cover Template', 'mylibrary' ),
 					'capability'  => 'edit_theme_options',
-					'description' => __( 'Settings for the "Cover Template" page template. Add a featured image to use as background.', 'library' ),
+					'description' => __( 'Settings for the "Cover Template" page template. Add a featured image to use as background.', 'mylibrary' ),
 					'priority'    => 42,
 				)
 			);
@@ -310,8 +310,8 @@ if ( ! class_exists( 'library_Customize' ) ) {
 				array(
 					'type'        => 'checkbox',
 					'section'     => 'cover_template_options',
-					'label'       => __( 'Fixed Background Image', 'library' ),
-					'description' => __( 'Creates a parallax effect when the visitor scrolls.', 'library' ),
+					'label'       => __( 'Fixed Background Image', 'mylibrary' ),
+					'description' => __( 'Creates a parallax effect when the visitor scrolls.', 'mylibrary' ),
 				)
 			);
 
@@ -357,8 +357,8 @@ if ( ! class_exists( 'library_Customize' ) ) {
 					$wp_customize,
 					'cover_template_overlay_background_color',
 					array(
-						'label'       => __( 'Overlay Background Color', 'library' ),
-						'description' => __( 'The color used for the overlay. Defaults to the accent color.', 'library' ),
+						'label'       => __( 'Overlay Background Color', 'mylibrary' ),
+						'description' => __( 'The color used for the overlay. Defaults to the accent color.', 'mylibrary' ),
 						'section'     => 'cover_template_options',
 					)
 				)
@@ -379,8 +379,8 @@ if ( ! class_exists( 'library_Customize' ) ) {
 					$wp_customize,
 					'cover_template_overlay_text_color',
 					array(
-						'label'       => __( 'Overlay Text Color', 'library' ),
-						'description' => __( 'The color used for the text in the overlay.', 'library' ),
+						'label'       => __( 'Overlay Text Color', 'mylibrary' ),
+						'description' => __( 'The color used for the text in the overlay.', 'mylibrary' ),
 						'section'     => 'cover_template_options',
 					)
 				)
@@ -400,8 +400,8 @@ if ( ! class_exists( 'library_Customize' ) ) {
 			$wp_customize->add_control(
 				'cover_template_overlay_opacity',
 				array(
-					'label'       => __( 'Overlay Opacity', 'library' ),
-					'description' => __( 'Make sure that the contrast is high enough so that the text is readable.', 'library' ),
+					'label'       => __( 'Overlay Opacity', 'mylibrary' ),
+					'description' => __( 'Make sure that the contrast is high enough so that the text is readable.', 'mylibrary' ),
 					'section'     => 'cover_template_options',
 					'type'        => 'range',
 					'input_attrs' => library_customize_opacity_range(),

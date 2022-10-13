@@ -1,9 +1,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Library\n"
+"Project-Id-Version: My Library\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-13 10:05+0000\n"
+"POT-Creation-Date: 2022-10-13 15:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.6.2; wp-6.0.2\n"
-"X-Domain: library"
+"X-Domain: mylibrary"
 
 #. %d: ID of a post.
 #: classes/class-library-walker-page.php:78
@@ -279,13 +279,16 @@ msgstr ""
 msgid "Header &amp; Footer Background Color"
 msgstr ""
 
-#. Author URI of the theme
+#. URI of the theme
+msgid "https://theme.7sbook.com/library/"
+msgstr ""
+
 #: footer.php:38
 msgid "https://wordpress.org/"
 msgstr ""
 
-#. URI of the theme
-msgid "https://wordpress.org/themes/library/"
+#. Author URI of the theme
+msgid "https://www.7sbook.com/"
 msgstr ""
 
 #: inc/block-patterns.php:187
@@ -298,11 +301,6 @@ msgstr ""
 
 #: comments.php:34
 msgid "Leave a comment"
-msgstr ""
-
-#. Name of the theme
-#: inc/block-patterns.php:20
-msgid "Library"
 msgstr ""
 
 #: classes/class-library-customize.php:404
@@ -337,6 +335,14 @@ msgstr ""
 
 #: functions.php:294
 msgid "Mobile Menu"
+msgstr ""
+
+#. Name of the theme
+msgid "My Library"
+msgstr ""
+
+#: inc/block-patterns.php:20
+msgid "mylibrary"
 msgstr ""
 
 #: functions.php:598
@@ -393,20 +399,6 @@ msgstr ""
 
 #: functions.php:986
 msgid "Operate"
-msgstr ""
-
-#. Description of the theme
-msgid ""
-"Our default theme for 2020 is designed to take full advantage of the "
-"flexibility of the block editor. Organizations and businesses have the "
-"ability to create dynamic landing pages with endless layouts using the group "
-"and column blocks. The centered content column and fine-tuned typography "
-"also makes it perfect for traditional blogs. Complete editor styles give you "
-"a good idea of what your content will look like, even before you publish. "
-"You can give your site a personal touch by changing the background colors "
-"and the accent color in the Customizer. The colors of all elements on your "
-"site are automatically calculated based on the colors you pick, ensuring a "
-"high, accessible color contrast for your visitors."
 msgstr ""
 
 #: classes/class-library-customize.php:360
@@ -651,10 +643,6 @@ msgstr ""
 msgid "The Store"
 msgstr ""
 
-#. Author of the theme
-msgid "the WordPress team"
-msgstr ""
-
 #: inc/starter-content.php:82
 msgid "Theatre of Operations"
 msgstr ""
@@ -737,4 +725,12 @@ msgstr ""
 
 #: classes/class-library-walker-comment.php:102
 msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#. Author of the theme
+msgid "传硕公版书"
+msgstr ""
+
+#. Description of the theme
+msgid "这是一款电子书管理主体"
 msgstr ""

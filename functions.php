@@ -114,10 +114,10 @@ function library_theme_support() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on Library, use a find and replace
-	 * to change 'library' to the name of your theme in all the template files.
+	 * to change 'mylibrary' to the name of your theme in all the template files.
 	 * 加载翻译文件
 	 */
-	load_theme_textdomain( 'library' );
+	load_theme_textdomain( 'mylibrary' , get_template_directory() . '/languages');
 
 	// Add support for full and wide align images.
 	// 添加对全对齐和宽对齐图像的支持。
@@ -289,11 +289,11 @@ add_action( 'wp_enqueue_scripts', 'library_non_latin_languages' );
 function library_menus() {
 
 	$locations = array(
-		'primary'  => __( 'Desktop Horizontal Menu', 'library' ),
-		'expanded' => __( 'Desktop Expanded Menu', 'library' ),
-		'mobile'   => __( 'Mobile Menu', 'library' ),
-		'footer'   => __( 'Footer Menu', 'library' ),
-		'social'   => __( 'Social Menu', 'library' ),
+		'primary'  => __( 'Desktop Horizontal Menu', 'mylibrary' ),
+		'expanded' => __( 'Desktop Expanded Menu', 'mylibrary' ),
+		'mobile'   => __( 'Mobile Menu', 'mylibrary' ),
+		'footer'   => __( 'Footer Menu', 'mylibrary' ),
+		'social'   => __( 'Social Menu', 'mylibrary' ),
 	);
 
 	register_nav_menus( $locations );
@@ -381,7 +381,7 @@ if ( ! function_exists( 'wp_body_open' ) ) {
  * @since My_Library 1.0
  */
 function library_skip_link() {
-	echo '<a class="skip-link screen-reader-text" href="#site-content">' . __( 'Skip to the content', 'library' ) . '</a>';
+	echo '<a class="skip-link screen-reader-text" href="#site-content">' . __( 'Skip to the content', 'mylibrary' ) . '</a>';
 }
 
 add_action( 'wp_body_open', 'library_skip_link', 5 );
@@ -408,9 +408,9 @@ function library_sidebar_registration() {
 		array_merge(
 			$shared_args,
 			array(
-				'name'        => __( 'Footer #1', 'library' ),
+				'name'        => __( 'Footer #1', 'mylibrary' ),
 				'id'          => 'sidebar-1',
-				'description' => __( 'Widgets in this area will be displayed in the first column in the footer.', 'library' ),
+				'description' => __( 'Widgets in this area will be displayed in the first column in the footer.', 'mylibrary' ),
 			)
 		)
 	);
@@ -420,9 +420,9 @@ function library_sidebar_registration() {
 		array_merge(
 			$shared_args,
 			array(
-				'name'        => __( 'Footer #2', 'library' ),
+				'name'        => __( 'Footer #2', 'mylibrary' ),
 				'id'          => 'sidebar-2',
-				'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'library' ),
+				'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'mylibrary' ),
 			)
 		)
 	);
@@ -540,22 +540,22 @@ function library_block_editor_settings() {
 	// Block Editor Palette.
 	$editor_color_palette = array(
 		array(
-			'name'  => __( 'Accent Color', 'library' ),
+			'name'  => __( 'Accent Color', 'mylibrary' ),
 			'slug'  => 'accent',
 			'color' => library_get_color_for_area( 'content', 'accent' ),
 		),
 		array(
-			'name'  => _x( 'Primary', 'color', 'library' ),
+			'name'  => _x( 'Primary', 'color', 'mylibrary' ),
 			'slug'  => 'primary',
 			'color' => library_get_color_for_area( 'content', 'text' ),
 		),
 		array(
-			'name'  => _x( 'Secondary', 'color', 'library' ),
+			'name'  => _x( 'Secondary', 'color', 'mylibrary' ),
 			'slug'  => 'secondary',
 			'color' => library_get_color_for_area( 'content', 'secondary' ),
 		),
 		array(
-			'name'  => __( 'Subtle Background', 'library' ),
+			'name'  => __( 'Subtle Background', 'mylibrary' ),
 			'slug'  => 'subtle-background',
 			'color' => library_get_color_for_area( 'content', 'borders' ),
 		),
@@ -568,7 +568,7 @@ function library_block_editor_settings() {
 		$background_color     = $background_color_arr[0]['default-color'];
 	}
 	$editor_color_palette[] = array(
-		'name'  => __( 'Background Color', 'library' ),
+		'name'  => __( 'Background Color', 'mylibrary' ),
 		'slug'  => 'background',
 		'color' => '#' . $background_color,
 	);
@@ -583,26 +583,26 @@ function library_block_editor_settings() {
 		'editor-font-sizes',
 		array(
 			array(
-				'name'      => _x( 'Small', 'Name of the small font size in the block editor', 'library' ),
-				'shortName' => _x( 'S', 'Short name of the small font size in the block editor.', 'library' ),
+				'name'      => _x( 'Small', 'Name of the small font size in the block editor', 'mylibrary' ),
+				'shortName' => _x( 'S', 'Short name of the small font size in the block editor.', 'mylibrary' ),
 				'size'      => 18,
 				'slug'      => 'small',
 			),
 			array(
-				'name'      => _x( 'Regular', 'Name of the regular font size in the block editor', 'library' ),
-				'shortName' => _x( 'M', 'Short name of the regular font size in the block editor.', 'library' ),
+				'name'      => _x( 'Regular', 'Name of the regular font size in the block editor', 'mylibrary' ),
+				'shortName' => _x( 'M', 'Short name of the regular font size in the block editor.', 'mylibrary' ),
 				'size'      => 21,
 				'slug'      => 'normal',
 			),
 			array(
-				'name'      => _x( 'Large', 'Name of the large font size in the block editor', 'library' ),
-				'shortName' => _x( 'L', 'Short name of the large font size in the block editor.', 'library' ),
+				'name'      => _x( 'Large', 'Name of the large font size in the block editor', 'mylibrary' ),
+				'shortName' => _x( 'L', 'Short name of the large font size in the block editor.', 'mylibrary' ),
 				'size'      => 26.25,
 				'slug'      => 'large',
 			),
 			array(
-				'name'      => _x( 'Larger', 'Name of the larger font size in the block editor', 'library' ),
-				'shortName' => _x( 'XL', 'Short name of the larger font size in the block editor.', 'library' ),
+				'name'      => _x( 'Larger', 'Name of the larger font size in the block editor', 'mylibrary' ),
+				'shortName' => _x( 'XL', 'Short name of the larger font size in the block editor.', 'mylibrary' ),
 				'size'      => 32,
 				'slug'      => 'larger',
 			),
@@ -828,13 +828,13 @@ function library_get_elements_array() {
 function ebooks_add_post_type()
 {
 	$labels = array(
-		'name'                  => _x('Books', 'Post type general name', "library"),
-		'singular_name'         => _x('Book', 'Post type singular name', "library"),
-		'menu_name'             => _x('Books', 'Admin Menu text', "library"),
-		'name_admin_bar'        => _x('Book', 'Add New on Toolbar', "library"),
-		'add_new'               => __('Add new book', "library"),
-		'add_new_item'          => __('Add new book', "library"),
-		'new_item'              => __('Add new book', "library"),
+		'name'                  => _x('Books', 'Post type general name', "mylibrary"),
+		'singular_name'         => _x('Book', 'Post type singular name', "mylibrary"),
+		'menu_name'             => _x('Books', 'Admin Menu text', "mylibrary"),
+		'name_admin_bar'        => _x('Book', 'Add New on Toolbar', "mylibrary"),
+		'add_new'               => __('Add new book', "mylibrary"),
+		'add_new_item'          => __('Add new book', "mylibrary"),
+		'new_item'              => __('Add new book', "mylibrary"),
 
 	);
 
@@ -913,8 +913,8 @@ function add_theme_options_menu()
 {
 	add_submenu_page(
 		'edit.php?post_type=book', 
-		__("Chapter list", "library"), 
-		__("Chapter list", "library"),
+		__("Chapter list", "mylibrary"), 
+		__("Chapter list", "mylibrary"),
 		'manage_options',
 		'manage-chapters', //别名，也就是在URL中GET传送的参数  
 		'ebooks_manage_chapters' //调用显示内容调用的函数  
@@ -983,7 +983,7 @@ function ebooks_manage_chapters()
 //添加文章列表
 function ebooks_add_chapters_column($columns)
 {
-	$columns['post_chapters'] = __("Operate", "library");
+	$columns['post_chapters'] = __("Operate", "mylibrary");
 	return $columns;
 }
 add_filter('manage_book_posts_columns', 'ebooks_add_chapters_column');
@@ -992,7 +992,7 @@ function views_column_content($column, $post_id)
 {
 	switch ($column) {
 		case 'post_chapters':
-			echo "<a href=\"edit.php?post_type=book&page=manage-chapters&post_id={$post_id}\">".__("Chapter list", "library")."</a>";
+			echo "<a href=\"edit.php?post_type=book&page=manage-chapters&post_id={$post_id}\">".__("Chapter list", "mylibrary")."</a>";
 			break;
 	}
 }
