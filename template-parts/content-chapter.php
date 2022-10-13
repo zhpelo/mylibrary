@@ -82,7 +82,6 @@ if (count($chapter_ids) > $current_key + 1) {
             <div class="entry-content">
                 <?php echo wpautop($chapter->chapter_content); ?>
             </div>
-
         </div>
 
         <nav class="pagination-single section-inner" aria-label="Post">
@@ -132,11 +131,7 @@ if (count($chapter_ids) > $current_key + 1) {
             </ul>
         
         </div>
-
-
-
     </article>
-
 </main>
 
 
