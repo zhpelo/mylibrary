@@ -703,7 +703,7 @@ function mylibrary_get_color_for_area( $area = 'content', $context = 'text' ) {
 			'content'       => array(
 				'text'      => '#3d3d3d',
 				'accent'    => '#cd2653',
-				'secondary' => '#dddddd',
+				'secondary' => '#6d6d6d',
 				'borders'   => '#dcd7ca',
 			),
 			'header-footer' => array(

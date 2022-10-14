@@ -2407,7 +2407,7 @@ body:not(.singular) main > article:first-of-type {
 /* Post Header ------------------------------- */
 
 .singular .entry-header {
-	background-color: #fff;
+	background-color: #5d6146;
 	padding: 4rem 0;
 }
 

@@ -162,7 +162,7 @@ if ( ! class_exists( 'mylibrary_Customize' ) ) {
 						'content'       => array(
 							'text'      => '#3d3d3d',
 							'accent'    => '#cd2653',
-							'secondary' => '#dddddd',
+							'secondary' => '#6d6d6d',
 							'borders'   => '#dcd7ca',
 						),
 						'header-footer' => array(
