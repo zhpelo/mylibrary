@@ -62,7 +62,7 @@ if ( ! function_exists( 'mylibrary_get_customizer_css' ) ) {
 		$body              = sanitize_hex_color( mylibrary_get_color_for_area( 'content', 'text' ) );
 		$body_default      = '#000000';
 		$secondary         = sanitize_hex_color( mylibrary_get_color_for_area( 'content', 'secondary' ) );
-		$secondary_default = '#6d6d6d';
+		$secondary_default = '#dddddd';
 		$borders           = sanitize_hex_color( mylibrary_get_color_for_area( 'content', 'borders' ) );
 		$borders_default   = '#dcd7ca';
 		$accent            = sanitize_hex_color( mylibrary_get_color_for_area( 'content', 'accent' ) );

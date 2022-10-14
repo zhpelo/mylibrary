@@ -160,15 +160,15 @@ if ( ! class_exists( 'mylibrary_Customize' ) ) {
 				array(
 					'default'           => array(
 						'content'       => array(
-							'text'      => '#000000',
+							'text'      => '#3d3d3d',
 							'accent'    => '#cd2653',
-							'secondary' => '#6d6d6d',
+							'secondary' => '#dddddd',
 							'borders'   => '#dcd7ca',
 						),
 						'header-footer' => array(
-							'text'      => '#000000',
+							'text'      => '#ffffff',
 							'accent'    => '#cd2653',
-							'secondary' => '#6d6d6d',
+							'secondary' => '#dddddd',
 							'borders'   => '#dcd7ca',
 						),
 					),
