@@ -1838,7 +1838,7 @@ body.touch-enabled .primary-menu ul li.menu-item-has-children > a {
 }
 
 .menu-modal-inner {
-	background: #fff;
+	background: #5d6146;
 	display: flex;
 	justify-content: stretch;
 	overflow: auto;
@@ -2101,7 +2101,7 @@ button.sub-menu-toggle.active svg {
 }
 
 .search-modal-inner {
-	background: #fff;
+	background: #5d6146;
 	transform: translateY(-100%);
 	transition: transform 0.15s linear, box-shadow 0.15s linear;
 }
