@@ -2364,7 +2364,7 @@ body.template-full-width [class*="wp-block"].alignfull:not(.has-background) [cla
 /* Archive Header ---------------------------- */
 
 .archive-header {
-	background-color: #fff;
+	background-color: #5d6146;
 	padding: 4rem 0;
 }
 
@@ -4511,7 +4511,7 @@ ul.footer-social li {
 .privacy-policy,
 .powered-by-wordpress,
 .to-the-top {
-	color: #6d6d6d;
+	color: #ffffff;
 }
 
 a.to-the-top {
