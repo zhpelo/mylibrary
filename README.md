@@ -1,5 +1,6 @@
-# WordPress 主题
+# 电子书写作 WordPress 主题
 
+演示网站： https://www.publicbook.cn/
 
 ```
   CREATE TABLE `wp_chapters22` (

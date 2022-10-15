@@ -55,6 +55,38 @@ add_action( 'init', 'mylibrary_add_books_type' );
 /**
  * 章节后台功能设置
  */
+//创建章节数据表
+function mylibrary_create_chapter_table()
+{
+	global $wpdb;
+	$table_name = "{$wpdb->prefix}chapters"; //获取表前缀，并设置新表的名称 
+
+	if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
+		$charset_collate = $wpdb->get_charset_collate();
+		$sql = "CREATE TABLE `{$table_name}` (
+					`chapter_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+					`post_id` bigint(20) UNSIGNED NOT NULL,
+					`chapter_author` bigint(20) unsigned NOT NULL DEFAULT '0',
+					`chapter_title` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+					`chapter_content` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
+					`chapter_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
+					`chapter_order` int(8) NOT NULL DEFAULT '0',
+					`chapter_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+					`chapter_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+					`chapter_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  					`chapter_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+					`chapter_status` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'publish',
+					PRIMARY KEY  (`chapter_id`),
+					KEY `chapter_parent` (`chapter_parent`),
+					KEY `chapter_status` (`chapter_status`),
+					KEY `chapter_author` (`chapter_author`)
+				) $charset_collate;";
+		require_once(ABSPATH . ("wp-admin/includes/upgrade.php"));
+		dbDelta($sql);
+	}
+}
+//在启用主题时创建数据表
+add_action('after_switch_theme', 'mylibrary_create_chapter_table');
 
 //  注册后台管理模块  
 function mylibrary_add_submenu_page()
