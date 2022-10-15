@@ -2577,7 +2577,7 @@ h2.entry-title {
 }
 
 .singular .featured-media::before {
-	background: #fff;
+	background: #5d6146;
 	content: "";
 	display: block;
 	position: absolute;
