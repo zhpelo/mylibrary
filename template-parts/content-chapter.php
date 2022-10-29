@@ -116,7 +116,7 @@ if (count($chapter_ids) > $current_key + 1) {
             </style>
 
             <h2>章节目录</h2>
-            <ul>
+            <ul style="margin-bottom: 40px;">
             <?php
                 foreach ($chapters as $c) {
                     if($chapter_id == $c->chapter_id){
@@ -124,11 +124,9 @@ if (count($chapter_ids) > $current_key + 1) {
                     }else{
                         echo "<li><a href=\"".get_chapter_url($c->chapter_id)."\">{$c->chapter_title}</a></li>";
                     }
-                    
                 }
                 ?>
             </ul>
-        
         </div>
     </article>
 </main>

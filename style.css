@@ -4508,7 +4508,6 @@ ul.footer-social li {
 	color: inherit;
 }
 
-.privacy-policy,
 .powered-by-wordpress,
 .to-the-top {
 	color: #ffffff;
@@ -4534,7 +4533,7 @@ a.to-the-top > * {
 }
 
 .privacy-policy {
-	margin: 1.2rem 0 0;
+	margin: 0;
 }
 
 .to-the-top-long {
@@ -5655,9 +5654,6 @@ a.to-the-top > * {
 		font-weight: 700;
 	}
 
-	.privacy-policy {
-		margin: 0 0 0 2.4rem;
-	}
 
 	.to-the-top-long {
 		display: inline;
