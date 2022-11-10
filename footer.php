@@ -30,15 +30,10 @@
 
 						<?php
 						if ( function_exists( 'the_privacy_policy_link' ) ) {
-							the_privacy_policy_link( '<p class="privacy-policy">', '</p>' );
+							the_privacy_policy_link( '<p class="privacy">', '</p>' );
 						}
 						?>
 
-						<p class="powered-by-wordpress">
-							<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mylibrary' ) ); ?>">
-								<?php _e( 'Powered by WordPress', 'mylibrary' ); ?>
-							</a>
-						</p><!-- .powered-by-wordpress -->
 
 					</div><!-- .footer-credits -->
 

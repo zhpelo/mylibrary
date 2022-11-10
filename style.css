@@ -4503,7 +4503,6 @@ ul.footer-social li {
 }
 
 .footer-copyright a,
-.privacy-policy a,
 .powered-by-wordpress a {
 	color: inherit;
 }
@@ -4532,14 +4531,13 @@ a.to-the-top > * {
 	margin: 0 0 0 2.4rem;
 }
 
-.privacy-policy {
-	margin: 0;
-}
 
 .to-the-top-long {
 	display: none;
 }
-
+.privacy-policy-link{
+	margin-left: 1rem;
+}
 
 /* -------------------------------------------------------------------------- */
 
