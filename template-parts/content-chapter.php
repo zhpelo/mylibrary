@@ -79,7 +79,7 @@ if (count($chapter_ids) > $current_key + 1) {
 
         <div class="post-inner <?php echo is_page_template('templates/template-full-width.php') ? '' : 'thin'; ?> ">
             <div class="entry-content">
-                <?php echo wpautop($chapter->chapter_content); ?>
+                <?php echo wpautop(stripslashes($chapter->chapter_content)); ?>
             </div>
         </div>
 
