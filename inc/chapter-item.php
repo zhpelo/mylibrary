@@ -20,7 +20,7 @@
                     </div>
 
                     <div style="margin-top: 20px;">
-                        <?php wp_editor($chapter_id ? wpautop( $chapter->chapter_content ) : '', "chapter_content"); ?>
+                        <?php wp_editor($chapter_id ? wpautop( stripslashes($chapter->chapter_content )) : '', "chapter_content"); ?>
                     </div>
 
                     <div class="submit">

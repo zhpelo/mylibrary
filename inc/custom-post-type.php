@@ -116,7 +116,7 @@ function mylibrary_manage_chapter_item()
 				$wpdb->prefix . 'chapters',
 				array(
 					'chapter_title'     => esc_sql($_POST['chapter_title']),
-					'chapter_content'   => stripslashes($_POST['chapter_content']),
+					'chapter_content'   => $_POST['chapter_content'],
 					'chapter_modified'       => current_time('mysql'),
 					'chapter_modified_gmt'       => current_time('mysql', 1),
 				),
@@ -131,7 +131,7 @@ function mylibrary_manage_chapter_item()
 				array(
 					'post_id'           => $post_id,
 					'chapter_title'     => esc_sql($_POST['chapter_title']),
-					'chapter_content'   => addslashes($_POST['chapter_content']),
+					'chapter_content'   => $_POST['chapter_content'],
 					'chapter_date'       => current_time('mysql'),
 					'chapter_date_gmt'       => current_time('mysql', 1),
 					'chapter_modified'       => current_time('mysql'),
