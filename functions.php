@@ -152,7 +152,7 @@ function mylibrary_theme_support() {
 	add_filter( 'script_loader_tag', array( $loader, 'filter_script_loader_tag' ), 10, 2 );
 
 	//设置chapter 伪静态规则
-	add_rewrite_rule( '^chapter/(\d+)[/]?$', 'index.php?chapter=$matches[1]', 'top' );
+	add_rewrite_rule( 'book/([^/]*)/([a-z0-9-]+)[/]?$', 'index.php?book=$matches[1]&chapter=$matches[2]', 'top' );
 	flush_rewrite_rules();
 }
 
@@ -839,3 +839,8 @@ function mylibrary_custom_chapter_title( $title ) {
     return $title;
 }
 add_filter( 'pre_get_document_title', 'mylibrary_custom_chapter_title', 50 );
+
+// add_action( 'init',  function() {
+//     add_rewrite_rule( 'book/([^/]*)/([a-z0-9-]+)[/]?$', 'index.php?book=$matches[1]&chapter=$matches[2]', 'top' );
+// 	flush_rewrite_rules();
+// } );

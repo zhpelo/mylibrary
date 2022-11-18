@@ -837,13 +837,13 @@ function mylibrary_unique_id( $prefix = '' ) {
 // 新增的自定义函数
 
 
-function get_chapter_url($chapter_id) {
+function get_chapter_url($book_slug,$chapter_id) {
 	global $wp_rewrite;
 
 	if ( ! $wp_rewrite->using_permalinks() ) {
-		return home_url( "/?chapter={$chapter_id}" );
+		return home_url( "/?book={$book_slug}&chapter={$chapter_id}" );
 	}
-	return home_url( "/chapter/{$chapter_id}/" );
+	return home_url( "/book/{$book_slug}/{$chapter_id}/" );
 }
 
 

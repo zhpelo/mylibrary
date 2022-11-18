@@ -32,7 +32,7 @@
 					echo "<h2>".__( 'Chapter list', 'mylibrary' )."</h2>";
 					echo "<ol>";
 					foreach ($chapters as $chapter) {
-						echo "<li><a href=\"".get_chapter_url($chapter->chapter_id)."\">{$chapter->chapter_title}</a></li>";
+						echo "<li><a href=\"".get_chapter_url($post->post_name,$chapter->chapter_id)."\">{$chapter->chapter_title}</a></li>";
 					}
 					echo "</ol>";
 				}

@@ -3,6 +3,7 @@ get_header();
 $chapter_id = get_query_var('chapter');
 $chapter = mylibrary_get_chapter($chapter_id);
 $book = get_post($chapter->post_id);
+
 $chapters = mylibrary_get_chapters($chapter->post_id);
 $chapter_ids = array_column($chapters, 'chapter_id');
 $chapter_titles = array_column($chapters, 'chapter_title');
@@ -87,7 +88,7 @@ if (count($chapter_ids) > $current_key + 1) {
             <hr class="styled-separator is-style-wide" aria-hidden="true">
             <div class="pagination-single-inner">
                     <?php  if ($prev) { ?>
-                    <a class="previous-post" href="<?php echo get_chapter_url($prev['id']); ?>">
+                    <a class="previous-post" href="<?php echo get_chapter_url($book->post_name,$prev['id']); ?>">
                         <span class="arrow" aria-hidden="true">←</span>
                         <span class="title">
                             <span class="title-inner"><?=$prev['title']?></span>
@@ -95,7 +96,7 @@ if (count($chapter_ids) > $current_key + 1) {
                     </a>
                     <?php } ?>
                     <?php if ($next) { ?>
-                    <a class="next-post" href="<?php echo get_chapter_url($next['id']) ?>">
+                    <a class="next-post" href="<?php echo get_chapter_url($book->post_name,$next['id']) ?>">
                         <span class="arrow" aria-hidden="true">→</span>
                             <span class="title">
                                 <span class="title-inner"><?=$next['title']?></span>
@@ -122,7 +123,7 @@ if (count($chapter_ids) > $current_key + 1) {
                     if($chapter_id == $c->chapter_id){
                         echo "<li class=\"". ($chapter_id == $c->chapter_id ? "active" : '') ."\">{$c->chapter_title}</li>";
                     }else{
-                        echo "<li><a href=\"".get_chapter_url($c->chapter_id)."\">{$c->chapter_title}</a></li>";
+                        echo "<li><a href=\"".get_chapter_url($book->post_name,$c->chapter_id)."\">{$c->chapter_title}</a></li>";
                     }
                 }
                 ?>
