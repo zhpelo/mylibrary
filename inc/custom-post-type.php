@@ -202,10 +202,10 @@ add_action( 'init', 'mylibrary_add_query_vars' );
 
 
 add_action( 'template_include' , function ($template) {
-	if (get_query_var('chapter') == false || get_query_var('chapter') == '') {
-		return $template;
+	if (get_query_var('chapter')) {
+		return get_template_directory() . '/template-parts/content-chapter.php';
 	}
-	return get_template_directory() . '/template-parts/content-chapter.php';
+	return $template;
 });
 
 

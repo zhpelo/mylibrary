@@ -819,7 +819,7 @@ function mylibrary_get_elements_array() {
 }
 
 
-function ashuwp_posts_per_page($query)
+function mylibrary_list_post_type($query)
 {
 	//首页或者搜索页的主循环
 	if ((is_home() || is_search() || is_category() || is_tag()) && $query->is_main_query()) {
@@ -827,5 +827,15 @@ function ashuwp_posts_per_page($query)
 	}
 	return $query;
 }
-add_action('pre_get_posts', 'ashuwp_posts_per_page');
+add_action('pre_get_posts', 'mylibrary_list_post_type');
 
+
+//自定义章节页面标题
+function mylibrary_custom_chapter_title( $title ) {
+    if ( get_query_var('chapter') ){
+		$chapter = mylibrary_get_chapter(get_query_var('chapter'));
+        return $chapter->chapter_title.'_'. get_the_title($chapter->post_id) .'_'. get_bloginfo('name').'_' .get_bloginfo('description');
+    }
+    return $title;
+}
+add_filter( 'pre_get_document_title', 'mylibrary_custom_chapter_title', 50 );
