@@ -1,9 +1,10 @@
-# 电子书写作 WordPress 主题
+# 传硕写作
+## 在这里开始您的创作之旅
 
-演示网站： https://www.publicbook.cn/
+展示网站： https://writer.7sbook.com/
 
 ```
-  CREATE TABLE `wp_chapters22` (
+  CREATE TABLE `wp_chapters` (
   `chapter_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `post_id` bigint(20) unsigned NOT NULL,
   `chapter_title` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
