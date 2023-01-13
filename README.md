@@ -1,8 +1,12 @@
-# 传硕写作
-## 在这里开始您的创作之旅
+# 传硕公版书 一个可以发布多章节书籍内容的WordPress主题
 
-展示网站： https://writer.7sbook.com/
 
+## demo
+展示网站： https://www.7sbook.com
+
+![alt 这是演示截图](./demo1.png)
+
+新增了章节内容表
 ```
   CREATE TABLE `wp_chapters` (
   `chapter_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
