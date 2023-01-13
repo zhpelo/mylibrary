@@ -5,6 +5,8 @@
 展示网站： https://www.7sbook.com
 
 ![alt 这是演示截图](./demo1.png)
+![alt 这是演示截图](./demo2.png)
+![alt 这是演示截图](./demo3.png)
 
 新增了章节内容表
 ```
