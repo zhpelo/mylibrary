@@ -2,7 +2,7 @@
 
 
 ## demo
-展示网站： https://www.7sbook.com
+展示网站：https://www.wenshuoge.com/
 
 ![alt 这是演示截图](./demo1.png)
 ![alt 这是演示截图](./demo2.png)
